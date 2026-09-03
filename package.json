@@ -1,0 +1,38 @@
+{
+  "name": "saranasmk-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "npm@10.8.2",
+  "description": "SARANA SMK - Platform Bantuan Sarana dan Informasi Sekolah SMK",
+  "workspaces": [
+    "apps/web",
+    "apps/api",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "NODE_OPTIONS='--max-old-space-size=4096' npm run dev --workspace @prisma/web",
+    "dev:api": "NODE_OPTIONS='--max-old-space-size=4096' npm run dev --workspace @saranasmk/api",
+    "build:web": "NODE_OPTIONS='--max-old-space-size=6144' npm run build --workspace @prisma/web",
+    "build:api": "NODE_OPTIONS='--max-old-space-size=4096' npm run build --workspace @saranasmk/api",
+    "typecheck": "turbo run typecheck",
+    "build:all": "turbo run build",
+    "lint:all": "turbo run lint",
+    "lint:web": "npm run lint --workspace @prisma/web",
+    "check:web": "npm run check --workspace @prisma/web",
+    "check:api": "npm run check --workspace @saranasmk/api",
+    "test:api": "npm run test --workspace @saranasmk/api",
+    "prepare": "husky",
+    "release": "standard-version",
+    "release:major": "standard-version --release-as major"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "husky": "^9.1.7",
+    "pg": "^8.23.0",
+    "pg-types": "^4.1.0",
+    "standard-version": "^9.5.0",
+    "turbo": "^2.10.12",
+    "umzug": "^3.8.3"
+  }
+}

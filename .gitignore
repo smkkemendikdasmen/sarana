@@ -1,0 +1,74 @@
+# ========== NEVER COMMIT THESE FILES - PRODUCTION SECURITY =================================
+# CREDENTIALS
+*.env
+.env.*
+!.env.example
+!.env.sample
+apps/api/.env
+apps/web/.env.local
+apps/web/.env.production
+.PROD_CREDENTIALS*
+.CREDENTIALS*
+*CREDENTIALS*
+*SAVE_ME*
+*SECRET*
+*SECRETS*
+*PROD*PASSWORD*
+*password*
+*_PASSWORD*
+_SSH_RESULT_BACKUP.txt
+ssh_pw.txt
+.ssh_password*
+id_rsa
+id_ed25519
+*.pem
+*.key
+*deploy-key*
+.vault
+keystore*
+# Deploy artifacts & archives (non-source, GB size, not code)
+__ARCHIVE_LEGACY*
+_BACKUP_PRODUCTION*
+_BACKUP_*
+deploy-v*
+_deploy_v*
+*.tgz
+*.tar.gz
+*.tar.bz2
+*.gz
+*.sqlc
+*.dump
+*.backup
+# Node/Turbo/Next cache
+node_modules
+.turbo
+.next
+out
+dist
+apps/api/dist
+apps/web/.next
+coverage
+*.tsbuildinfo
+.cache
+# OS /tmp / logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
+# Local DB & IDE
+.idea
+.vscode
+*.swp
+*.swo
+# E2E artifacts
+playwright-report/
+test-results/
+/blob-report/
+# Temporary shell scripts / private seeds & scripts
+/tmp
+*.local.*
+/tmp/*.sh
+/tmp/*.py
+/tmp/*.csv

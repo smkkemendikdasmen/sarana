@@ -1,0 +1,348 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7fb;
+  --foreground: #0f1b2d;
+  --surface: #ffffff;
+  --surface-muted: #eef3fb;
+  --primary: #123c73;
+  --primary-strong: #0b2654;
+  --accent: #1d6fd8;
+  --accent-soft: #dfeeff;
+  --success: #1e9e63;
+  --warning: #d6a64d;
+  --danger: #d64545;
+  --border: rgba(18, 60, 115, 0.12);
+  --grid: rgba(18, 60, 115, 0.06);
+  --shadow-soft: 0 24px 60px rgba(16, 34, 68, 0.12);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-border: var(--border);
+  --font-sans: var(--font-roboto);
+  --font-display: var(--font-roboto);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-roboto), sans-serif;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(29, 111, 216, 0.12), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(214, 166, 77, 0.12), transparent 24%),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: auto, auto, 28px 28px, 28px 28px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.panel {
+  background: color-mix(in srgb, var(--surface) 94%, white 6%);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.work-surface {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(247, 250, 255, 0.92));
+  border: 1px solid rgba(18, 60, 115, 0.1);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.7) inset,
+    0 16px 40px rgba(16, 34, 68, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.work-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(29, 111, 216, 0.12);
+  background: rgba(29, 111, 216, 0.08);
+  color: var(--primary);
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.work-kpi {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(240, 245, 255, 0.92));
+  border: 1px solid rgba(18, 60, 115, 0.1);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 20px 45px rgba(16, 34, 68, 0.08);
+}
+
+.display-font {
+  font-family: var(--font-roboto), sans-serif;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-flex;
+}
+
+/* ============ GLOBAL PRINT STYLESHEET (Print Portal A4) ============ */
+/* Digunakan oleh Fasilitator Administrasi Bimtek Detail Preview & Save PDF */
+/* Berikut @page default + named variant untuk berbagai ukuran kertas: */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 12mm 14mm 12mm;
+  }
+  @page :first { margin-top: 10mm; }
+  @page landscape   { size: A4 landscape;    margin: 10mm 10mm 10mm 10mm; }
+  @page a4          { size: A4;              margin: 12mm 12mm 14mm 12mm; }
+  @page a4-landscape{ size: A4 landscape;    margin: 10mm 10mm 10mm 10mm; }
+  @page a5          { size: A5;              margin: 10mm 10mm 10mm 10mm; }
+  @page a5-landscape{ size: A5 landscape;    margin: 8mm 8mm 8mm 8mm; }
+  @page letter      { size: Letter;          margin: 12mm 12mm 14mm 12mm; }
+  @page letter-landscape { size: Letter landscape; margin: 10mm; }
+  @page folio       { size: 215.9mm 330.2mm; margin: 12mm 12mm 14mm 12mm; }
+  @page folio-landscape { size: 330.2mm 215.9mm; margin: 10mm; }
+  @page legal       { size: Legal;           margin: 12mm 12mm 14mm 12mm; }
+  @page legal-landscape { size: Legal landscape; margin: 10mm; }
+
+  html, body {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    text-rendering: optimizeLegibility;
+  }
+  body > *:not(#print-portal-root),
+  .print\:hidden,
+  [aria-hidden="true"] {
+    display: none !important;
+  }
+  #print-portal-root {
+    display: block !important;
+    width: 100% !important;
+  }
+  #print-portal-root .print-a4-landscape,
+  #print-portal-root .page-landscape { page: landscape; }
+  #print-portal-root .page-a4          { page: a4; }
+  #print-portal-root .page-a5          { page: a5; }
+  #print-portal-root .page-letter      { page: letter; }
+  #print-portal-root .page-folio       { page: folio; }
+  #print-portal-root .page-legal       { page: legal; }
+
+  /* ==== Heading / Section page break ==== */
+  #print-portal-root h1 { page-break-before: always; }
+  #print-portal-root h1:first-child,
+  #print-portal-root section:first-child h1 { page-break-before: auto; }
+  #print-portal-root section,
+  #print-portal-root article,
+  #print-portal-root div.rpd-block,
+  #print-portal-root div.pks-block {
+    page-break-inside: avoid;
+    break-inside: avoid-page;
+  }
+
+  /* ==== Tabel safe break ==== */
+  #print-portal-root table {
+    page-break-inside: auto;
+    break-inside: auto;
+    border-collapse: collapse !important;
+  }
+  #print-portal-root tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  #print-portal-root thead { display: table-header-group; }
+  #print-portal-root tfoot { display: table-footer-group; }
+  #print-portal-root th, #print-portal-root td {
+    border: 1px solid #475569 !important;
+  }
+
+  /* ==== Gambar safe break + exact ==== */
+  #print-portal-root img {
+    page-break-inside: avoid !important;
+    break-inside: avoid-page !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  #print-portal-root figure {
+    page-break-inside: avoid;
+  }
+
+  /* ==== Utility rounded/shadow reset saat cetak ==== */
+  #print-portal-root .rounded-\[24px\],
+  #print-portal-root .rounded-\[28px\],
+  #print-portal-root .rounded-\[20px\],
+  #print-portal-root .rounded-xl,
+  #print-portal-root .rounded-2xl,
+  #print-portal-root .rounded-3xl {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #0f172a !important;
+  }
+  #print-portal-root [class*="shadow-"],
+  #print-portal-root [style*="box-shadow"] {
+    box-shadow: none !important;
+  }
+
+  /* ==== Preserve background untuk header tabel & alert ==== */
+  #print-portal-root .bg-slate-50,
+  #print-portal-root thead th {
+    background-color: #f1f5f9 !important;
+  }
+  #print-portal-root .bg-primary\/\[0\.05\],
+  #print-portal-root .bg-primary\/\[0\.06\] {
+    background-color: #eef2ff !important;
+  }
+  #print-portal-root .bg-emerald-50\/60 {
+    background-color: #ecfdf5 !important;
+  }
+  #print-portal-root .bg-amber-50,
+  #print-portal-root .bg-yellow-50 {
+    background-color: #fffbeb !important;
+  }
+  #print-portal-root .bg-rose-50,
+  #print-portal-root .bg-red-50 {
+    background-color: #fff1f2 !important;
+  }
+  #print-portal-root .bg-slate-900,
+  #print-portal-root .bg-black {
+    background-color: #0f172a !important;
+    color: white !important;
+  }
+  #print-portal-root .text-slate-400,
+  #print-portal-root .text-slate-500 {
+    color: #334155 !important;
+  }
+  #print-portal-root .border-dashed {
+    border-style: dashed !important;
+  }
+  #print-portal-root .warning-print-empty {
+    border: 2px dashed #dc2626 !important;
+    background-color: #fef2f2 !important;
+    color: #b91c1c !important;
+  }
+}
+
+/* =========================================================================
+ *  TIPTAP DIY WORD-LIKE PAGINATION (FREE MIT VISUAL)
+ *  - Manual Page Break visual + print mapping
+ *  - Paper work-surface scrollbar styling
+ * ========================================================================= */
+
+/* ==== MANUAL PAGE BREAK (INSERTED VIA RIBBON INSERT TAB) ==== */
+.ProseMirror hr.manual-page-break,
+.ProseMirror hr[data-page-break="true"] {
+  position: relative;
+  border: none;
+  border-top: 2px dashed #6366f1 !important;
+  margin: 24px 0 !important;
+  opacity: 1 !important;
+  height: 18px !important;
+  background: transparent !important;
+}
+
+.ProseMirror hr.manual-page-break::after,
+.ProseMirror hr[data-page-break="true"]::after {
+  content: "—— PAGE BREAK — Pin mulai cetak pindah halaman ——";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #eef2ff;
+  color: #4338ca;
+  border: 1px solid #c7d2fe;
+  border-radius: 9999px;
+  padding: 2px 12px;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* ==== SAAT PRINT: Manual Page Break MEMICU HALAMAN BARU SESUNGGUHNYA ==== */
+@media print {
+  hr.manual-page-break,
+  hr[data-page-break="true"] {
+    page-break-before: always !important;
+    break-before: page !important;
+    border: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    visibility: hidden !important;
+  }
+  hr.manual-page-break::after,
+  hr[data-page-break="true"]::after {
+    display: none !important;
+  }
+}
+
+/* ==== WORD-LIKE PAPER WORK SURFACE SCROLLBAR (RAPIH) ==== */
+.tpt-paper-surface {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 #e5e9f0;
+}
+.tpt-paper-surface::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.tpt-paper-surface::-webkit-scrollbar-track {
+  background: #e5e9f0;
+  border-radius: 8px;
+}
+.tpt-paper-surface::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 8px;
+  border: 3px solid #e5e9f0;
+}
+.tpt-paper-surface::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* ==== GAP ANTAR HALAMAN VISUAL (nanti multiple pages) ==== */
+.tpt-a4-page + .tpt-a4-page {
+  margin-top: 28px;
+}
+
+/* ==== BUBBLE MENU IMAGE ANIMASI MUNCUL ==== */
+[data-img-bubble-root] {
+  animation: tpt-bubble-in 120ms ease-out both;
+}
+@keyframes tpt-bubble-in {
+  from { opacity: 0; transform: translateY(4px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}

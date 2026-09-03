@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1 — Identitas Sekolah (Data Informasi)</title>
+    <link rel="stylesheet" href="./1_Identitas.css" />
+  </head>
+  <body>
+    <div class="page">
+<h2>DATA SEKOLAH — IDENTITAS</h2>
+<p class="subtitle-center">Program Bantuan Sarana dan Peralatan SMK Tahun Anggaran {{tahun_anggaran}}</p>
+<hr class="hr-section" />
+
+<h3>1. Profil Umum Sekolah</h3>
+<table class="profile-table">
+  <tbody>
+    <tr>
+      <td>Nama Sekolah</td>
+      <td>{{nama_sekolah}}</td>
+    </tr>
+    <tr>
+      <td>NPSN</td>
+      <td class="mono">{{npsn}}</td>
+    </tr>
+    <tr>
+      <td>Alamat Jalan</td>
+      <td>{{alamat_jalan}}</td>
+    </tr>
+    <tr>
+      <td>Kecamatan</td>
+      <td>{{kecamatan}}</td>
+    </tr>
+    <tr>
+      <td>Kabupaten / Kota</td>
+      <td>{{kab_kota}}</td>
+    </tr>
+    <tr>
+      <td>Provinsi</td>
+      <td>{{provinsi}}</td>
+    </tr>
+    <tr>
+      <td>Kode Pos</td>
+      <td class="mono">{{kode_pos}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>2. Struktur Kepemimpinan Sekolah</h3>
+<table class="leadership-table">
+  <tbody>
+    <tr>
+      <td>Nama Kepala Sekolah</td>
+      <td>{{kepala_sekolah_nama}}</td>
+    </tr>
+    <tr>
+      <td>NIP Kepala Sekolah</td>
+      <td class="mono">{{kepala_sekolah_nip}}</td>
+    </tr>
+    <tr>
+      <td>Kontak HP Kepala Sekolah</td>
+      <td>{{kepala_sekolah_hp}}</td>
+    </tr>
+    <tr>
+      <td>Wakasek Sarana (Nama)</td>
+      <td>{{wakasek_sarana_nama}}</td>
+    </tr>
+    <tr>
+      <td>Wakasek Sarana (HP)</td>
+      <td>{{wakasek_sarana_hp}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>3. Konsentrasi Keahlian yang Diusulkan</h3>
+<div class="konsentrasi-box">
+  <ul>
+{{konsentrasi_keahlian_list}}
+  </ul>
+</div>
+
+<p class="tempat-tanggal">{{tempat_tanggal_buat}}, {{tanggal_sekarang}}</p>
+<table class="signature-table">
+  <tbody>
+    <tr>
+      <td>
+        <p>Mengetahui,</p>
+        <p style="font-weight: 700; margin-top: 10px;">Kepala Sekolah</p>
+        <div class="signature-gap"></div>
+        <p class="signature-name">{{kepala_sekolah_nama}}</p>
+        <p class="signature-nip">NIP. {{kepala_sekolah_nip}}</p>
+      </td>
+      <td>
+        <p>Fasilitator Administrasi,</p>
+        <div class="signature-gap"></div>
+        <p class="signature-name">{{nama_fasilitator_adm}}</p>
+        <p class="signature-nip">NIP/NIK. {{nip_fasilitator_adm}}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </body>
+</html>

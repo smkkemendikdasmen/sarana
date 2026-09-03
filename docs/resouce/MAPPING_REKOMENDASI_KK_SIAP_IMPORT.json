@@ -1,0 +1,6814 @@
+[
+  {
+    "no": 1,
+    "npsn": "10110535",
+    "nama_sekolah": "SMK Negeri 3 Aceh Barat Daya",
+    "k1_code": "10.2.1",
+    "k2_code": "2.2.2",
+    "k3_code": "8.1.1",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain Komunikasi Visual (DKV)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 92
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Bisnis Digital",
+        "status": "MATCHED EXACT",
+        "master_code": "8.1.1",
+        "master_name": "Bisnis Digital",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 2,
+    "npsn": "10110536",
+    "nama_sekolah": "SMK NEGERI 2 ACEH BARAT DAYA",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 3,
+    "npsn": "10110273",
+    "nama_sekolah": "SMKN 1 Arongan Lambalek",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 4,
+    "npsn": "10110537",
+    "nama_sekolah": "SMK NEGERI 5 ACEH BARAT DAYA",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 5,
+    "npsn": "10102743",
+    "nama_sekolah": "SMK NEGERI 1 TRUMON TIMUR",
+    "k1_code": "6.1.1",
+    "k2_code": "6.1.2",
+    "k3_code": "10.2.1",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Perkebunan",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.1",
+        "master_name": "Agribisnis Tanaman Perkebunan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Desain Komunikasi Visual (DKV)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 92
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 6,
+    "npsn": "10104057",
+    "nama_sekolah": "SMKN 1 SINGKIL UTARA",
+    "k1_code": "10.2.1",
+    "k2_code": "6.1.1",
+    "k3_code": "3.5.2",
+    "k4_code": "6.2.2",
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain Komunikasi Visual",
+        "status": "MATCHED EXACT",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Agribisnis Tanaman Perkebunan",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.1",
+        "master_name": "Agribisnis Tanaman Perkebunan",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Teknik Pemboran Minyak dan Gas",
+        "status": "MATCHED EXACT",
+        "master_code": "3.5.2",
+        "master_name": "Teknik Pemboran Minyak dan Gas",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "Agribisnis Ternak Unggas",
+        "status": "MATCHED EXACT",
+        "master_code": "6.2.2",
+        "master_name": "Agribisnis Ternak Unggas",
+        "score": 100
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 7,
+    "npsn": "60726644",
+    "nama_sekolah": "SMKN 1 KUALASIMPANG",
+    "k1_code": "8.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Bisnis Digital",
+        "status": "MATCHED EXACT",
+        "master_code": "8.1.1",
+        "master_name": "Bisnis Digital",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 8,
+    "npsn": "70003115",
+    "nama_sekolah": "SMK NEGERI 5 TAKENGON",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 9,
+    "npsn": "10112892",
+    "nama_sekolah": "SMK SWASTA IT AL AMANAH",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 10,
+    "npsn": "10110357",
+    "nama_sekolah": "SMKS BADRUL ULUM",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 11,
+    "npsn": "69726324",
+    "nama_sekolah": "SMKS Plus AMAL",
+    "k1_code": "8.2.1",
+    "k2_code": "5.1.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "MANAJEMEN PERKANTORAN",
+        "status": "MATCHED EXACT",
+        "master_code": "8.2.1",
+        "master_name": "Manajemen Perkantoran",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "CAREGIVER",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "5.1.1",
+        "master_name": "Layanan Penunjang Keperawatan dan Caregiving",
+        "score": 89
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 12,
+    "npsn": "10106280",
+    "nama_sekolah": "SMK NEGERI 1 BAKTIYA BARAT",
+    "k1_code": "10.7.1",
+    "k2_code": "10.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Desain Komunikasi Visaual",
+        "status": "MATCHED EXACT",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 13,
+    "npsn": "69909282",
+    "nama_sekolah": "SMKN 1 Cot Girek",
+    "k1_code": "10.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Grafika (TG)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "10.2.2",
+        "master_name": "Teknik Grafika",
+        "score": 92
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 14,
+    "npsn": "10113067",
+    "nama_sekolah": "SMK Negeri 1 Lapang",
+    "k1_code": "6.3.2",
+    "k2_code": "8.2.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Perikanan Payau dan Laut",
+        "status": "MATCHED EXACT",
+        "master_code": "6.3.2",
+        "master_name": "Agribisnis Perikanan Payau dan Laut",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Managemen Perkantoran",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "8.2.2",
+        "master_name": "Manajemen Logistik",
+        "score": 85
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 15,
+    "npsn": "69787116",
+    "nama_sekolah": "SMKS TERPADU BABUSSALAM",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 16,
+    "npsn": "10113041",
+    "nama_sekolah": "SMK FARMASI CITRA BANGSA",
+    "k1_code": "5.3.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Layanan Penunjang Kefarmasian Klinis dan Komunitas",
+        "status": "MATCHED EXACT",
+        "master_code": "5.3.1",
+        "master_name": "Layanan Penunjang Kefarmasian Klinis dan Komunitas",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 17,
+    "npsn": "69943314",
+    "nama_sekolah": "SMK Swasta Mubarrak Al-Waliyah",
+    "k1_code": "10.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "DESAIN KOMUNIKASI VISUAL",
+        "status": "MATCHED EXACT",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 18,
+    "npsn": "70049631",
+    "nama_sekolah": "SMK SWASTA TASTAFI",
+    "k1_code": "4.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Rekayasa Perangkat Lunak",
+        "status": "MATCHED EXACT",
+        "master_code": "4.1.1",
+        "master_name": "Rekayasa Perangkat Lunak",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 19,
+    "npsn": "10107108",
+    "nama_sekolah": "SMK Negeri 1 Peusangan",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 20,
+    "npsn": "69727923",
+    "nama_sekolah": "SMK NEGERI 14 MEDAN",
+    "k1_code": "2.5.3",
+    "k2_code": "3.1.1",
+    "k3_code": "2.2.1",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Elektronika Industri",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.5.3",
+        "master_name": "Teknik Elektronika Industri",
+        "score": 96
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Instalasi Tenaga Listrik",
+        "status": "MATCHED EXACT",
+        "master_code": "3.1.1",
+        "master_name": "Teknik Instalasi Tenaga Listrik",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 21,
+    "npsn": "69924677",
+    "nama_sekolah": "SMK SWASTA MUHAMMAD YAASIIN SEI LEPAN",
+    "k1_code": "4.2.1",
+    "k2_code": "2.2.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 22,
+    "npsn": "10104846",
+    "nama_sekolah": "SMK NEGERI 1 ACEH BARAT DAYA",
+    "k1_code": "2.2.2",
+    "k2_code": "2.2.1",
+    "k3_code": "3.1.1",
+    "k4_code": "4.2.1",
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Teknik Instalasi Tenaga Listrik",
+        "status": "MATCHED EXACT",
+        "master_code": "3.1.1",
+        "master_name": "Teknik Instalasi Tenaga Listrik",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 23,
+    "npsn": "10110534",
+    "nama_sekolah": "SMK NEGERI 4 ACEH BARAT DAYA",
+    "k1_code": "2.3.1",
+    "k2_code": "6.5.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Pengelasan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.3.1",
+        "master_name": "Teknik Pengelasan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Agribisnis Pengolahan Hasil Pertanian",
+        "status": "MATCHED EXACT",
+        "master_code": "6.5.1",
+        "master_name": "Agribisnis Pengolahan Hasil Pertanian",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 24,
+    "npsn": "60729112",
+    "nama_sekolah": "SMKN 1  LHOKNGA",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 25,
+    "npsn": "10113369",
+    "nama_sekolah": "SMKS HIDAYATUL ANAM",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 26,
+    "npsn": "69947031",
+    "nama_sekolah": "SMK Swasta Muhammadiyah Singkil",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 27,
+    "npsn": "10108048",
+    "nama_sekolah": "SMK NEGERI 2 KARANG BARU",
+    "k1_code": "2.2.1",
+    "k2_code": "2.2.2",
+    "k3_code": "2.3.1",
+    "k4_code": "2.5.2",
+    "k5_code": "3.1.1",
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Teknik Pengelasan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.3.1",
+        "master_name": "Teknik Pengelasan",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "Teknik Mekatronika",
+        "status": "MATCHED EXACT",
+        "master_code": "2.5.2",
+        "master_name": "Teknik Mekatronika",
+        "score": 100
+      },
+      {
+        "slot": 5,
+        "csv": "Teknik Instalasi Tenaga Listrik",
+        "status": "MATCHED EXACT",
+        "master_code": "3.1.1",
+        "master_name": "Teknik Instalasi Tenaga Listrik",
+        "score": 100
+      }
+    ]
+  },
+  {
+    "no": 28,
+    "npsn": "10110624",
+    "nama_sekolah": "SMK NEGERI 1 BENDAHARA",
+    "k1_code": "2.2.1",
+    "k2_code": "7.4.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Neutika Kapal",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "7.4.1",
+        "master_name": "Nautika Kapal Niaga",
+        "score": 97
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 29,
+    "npsn": "69966741",
+    "nama_sekolah": "SMKS Sabilul Ulum",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 30,
+    "npsn": "10107161",
+    "nama_sekolah": "SMKS SYUKRONIYAH",
+    "k1_code": "2.3.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik pengelasan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.3.1",
+        "master_name": "Teknik Pengelasan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 31,
+    "npsn": "10107158",
+    "nama_sekolah": "SMKN 1 KARANG BARU",
+    "k1_code": "4.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Rekayasa Perangkat Lunak (RPL)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "4.1.1",
+        "master_name": "Rekayasa Perangkat Lunak",
+        "score": 92
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 32,
+    "npsn": "10104267",
+    "nama_sekolah": "SMK SWASTA MAIMUN HABSYAH KUALA SIMPANG",
+    "k1_code": "2.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 33,
+    "npsn": "10108049",
+    "nama_sekolah": "SMK NEGERI 3 KARANG BARU",
+    "k1_code": "10.7.1",
+    "k2_code": "9.3.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Kuliner",
+        "status": "MATCHED EXACT",
+        "master_code": "9.3.1",
+        "master_name": "Kuliner",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 34,
+    "npsn": "70005918",
+    "nama_sekolah": "SMK SWASTA MISRA",
+    "k1_code": "10.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "DESAIN KOMUNIKASI VISUAL",
+        "status": "MATCHED EXACT",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 35,
+    "npsn": "10111334",
+    "nama_sekolah": "SMK NEGERI 2 PEUREULAK",
+    "k1_code": "2.2.2",
+    "k2_code": "2.3.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Pengelasan",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.3.1",
+        "master_name": "Teknik Pengelasan",
+        "score": 95
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 36,
+    "npsn": "10113344",
+    "nama_sekolah": "SMK NEGERI 1 PEUREULAK",
+    "k1_code": "10.7.1",
+    "k2_code": "2.2.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 37,
+    "npsn": "69946304",
+    "nama_sekolah": "SMK NEGERI 1 INDRA MAKMU",
+    "k1_code": "2.2.2",
+    "k2_code": "10.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Desain Komunikasi Visual (DKV)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 92
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 38,
+    "npsn": "10110606",
+    "nama_sekolah": "SMK NEGERI 1 SIMPANG ULIM",
+    "k1_code": "2.2.1",
+    "k2_code": "4.2.1",
+    "k3_code": "2.2.2",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 39,
+    "npsn": "10113373",
+    "nama_sekolah": "SMK NEGERI 1 PANTE BIDARI",
+    "k1_code": "10.7.1",
+    "k2_code": "2.5.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Audio Visual",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.5.1",
+        "master_name": "Teknik Audio Video",
+        "score": 96
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 40,
+    "npsn": "10111584",
+    "nama_sekolah": "SMK NEGERI 1 LOKOP",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 41,
+    "npsn": "69990050",
+    "nama_sekolah": "SMK NEGERI 1 NURUSSALAM",
+    "k1_code": "10.7.1",
+    "k2_code": "3.1.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Instalasi Tenaga Listrik",
+        "status": "MATCHED EXACT",
+        "master_code": "3.1.1",
+        "master_name": "Teknik Instalasi Tenaga Listrik",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 42,
+    "npsn": "10112170",
+    "nama_sekolah": "SMK NEGERI 1 JULOK",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 43,
+    "npsn": "10108210",
+    "nama_sekolah": "SMK NEGERI 1 TANAH JAMBO AYE",
+    "k1_code": "2.5.1",
+    "k2_code": "10.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "TEKNIK AUDIO VIDEO (TAV)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.5.1",
+        "master_name": "Teknik Audio Video",
+        "score": 93
+      },
+      {
+        "slot": 2,
+        "csv": "Desain Komunikasi Visual (DKV)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 92
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 44,
+    "npsn": "10108219",
+    "nama_sekolah": "SMK NEGERI 1 TANAH LUAS",
+    "k1_code": "2.2.2",
+    "k2_code": "10.2.1",
+    "k3_code": "2.3.1",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Desain Komunikasi Visual",
+        "status": "MATCHED EXACT",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Pengelasan",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.3.1",
+        "master_name": "Teknik Pengelasan",
+        "score": 95
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 45,
+    "npsn": "69759159",
+    "nama_sekolah": "SMK NEGERI 1 BAKTIYA",
+    "k1_code": "2.2.2",
+    "k2_code": "4.1.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Rekayasa Perangkat Lunak",
+        "status": "MATCHED EXACT",
+        "master_code": "4.1.1",
+        "master_name": "Rekayasa Perangkat Lunak",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 46,
+    "npsn": "10106278",
+    "nama_sekolah": "SMK NEGERI 1 MUARA BATU",
+    "k1_code": "2.2.2",
+    "k2_code": "7.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Nautika Kapal Penangkap Ikan",
+        "status": "MATCHED EXACT",
+        "master_code": "7.2.1",
+        "master_name": "Nautika Kapal Penangkap Ikan",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 47,
+    "npsn": "10108220",
+    "nama_sekolah": "SMK NEGERI 1 SYAMTALIRA ARON",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 48,
+    "npsn": "69726919",
+    "nama_sekolah": "SMK SWASTA HUMANIORA",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 49,
+    "npsn": "70035709",
+    "nama_sekolah": "SMK SWASTA ANEUK LAOT",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 50,
+    "npsn": "70036211",
+    "nama_sekolah": "SMK Swasta IT Manahilul Irfan",
+    "k1_code": "9.3.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Kuliner",
+        "status": "MATCHED EXACT",
+        "master_code": "9.3.1",
+        "master_name": "Kuliner",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 51,
+    "npsn": "70006104",
+    "nama_sekolah": "SMK SWASTA NURUL YAQIN",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 52,
+    "npsn": "10108221",
+    "nama_sekolah": "SMKS TERPADU AL AZHAR",
+    "k1_code": "2.5.1",
+    "k2_code": "5.1.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Audio Video",
+        "status": "MATCHED EXACT",
+        "master_code": "2.5.1",
+        "master_name": "Teknik Audio Video",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Layanan Penunjang Keperawatan dan cargiving",
+        "status": "MATCHED EXACT",
+        "master_code": "5.1.1",
+        "master_name": "Layanan Penunjang Keperawatan dan Caregiving",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 53,
+    "npsn": "69988419",
+    "nama_sekolah": "SMK Al Fhattani",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 54,
+    "npsn": "69970964",
+    "nama_sekolah": "SMKS Kafilul Yatim",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 55,
+    "npsn": "69972330",
+    "nama_sekolah": "SMKN 5 BENER MERIAH",
+    "k1_code": "2.2.1",
+    "k2_code": "6.5.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Agribisnis Pengolahan Hasil Pertanian",
+        "status": "MATCHED EXACT",
+        "master_code": "6.5.1",
+        "master_name": "Agribisnis Pengolahan Hasil Pertanian",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 56,
+    "npsn": "10107107",
+    "nama_sekolah": "SMK NEGERI 1 JEUNIEB",
+    "k1_code": "7.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "TEKNIKA KAPAL PENANGKAPAN IKAN ( TKPI)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "7.1.1",
+        "master_name": "Teknika Kapal Penangkap Ikan",
+        "score": 76
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 57,
+    "npsn": "69945354",
+    "nama_sekolah": "SMK SWASTA AL-HIDAYAH",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 58,
+    "npsn": "10107109",
+    "nama_sekolah": "SMK NEGERI 1 JEUMPA",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 59,
+    "npsn": "10103755",
+    "nama_sekolah": "SMK Kesehatan Muhammadiyah Bireuen",
+    "k1_code": "5.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "LAYANAN PENUNJANG KEPERAWATAN DAN CAREGIVING",
+        "status": "MATCHED EXACT",
+        "master_code": "5.1.1",
+        "master_name": "Layanan Penunjang Keperawatan dan Caregiving",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 60,
+    "npsn": "10113428",
+    "nama_sekolah": "SMK-PP NEGERI BIREUEN",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 61,
+    "npsn": "10104541",
+    "nama_sekolah": "SMK NEGERI 1 GAYO LUES",
+    "k1_code": "2.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 62,
+    "npsn": "10100635",
+    "nama_sekolah": "SMK NEGERI 1 SIGLI",
+    "k1_code": "10.7.1",
+    "k2_code": "9.3.1",
+    "k3_code": "10.2.1",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Kuliner",
+        "status": "MATCHED EXACT",
+        "master_code": "9.3.1",
+        "master_name": "Kuliner",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Desain Komunikasi Visual",
+        "status": "MATCHED EXACT",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 63,
+    "npsn": "10100633",
+    "nama_sekolah": "SMKS LILAWANGSA SIGLI",
+    "k1_code": "5.3.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "farmasi klinis dan komunitas",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "5.3.1",
+        "master_name": "Layanan Penunjang Kefarmasian Klinis dan Komunitas",
+        "score": 96
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 64,
+    "npsn": "69753602",
+    "nama_sekolah": "SMK NEGERI MANE",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 65,
+    "npsn": "10110275",
+    "nama_sekolah": "SMK NEGERI 3 SIGLI",
+    "k1_code": "4.2.1",
+    "k2_code": "10.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Desain Komunikasi Visual (DKV)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 92
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 66,
+    "npsn": "10111806",
+    "nama_sekolah": "SMK NEGERI 1 BANDAR DUA",
+    "k1_code": "2.2.1",
+    "k2_code": "10.7.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Tata Busana",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 96
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 67,
+    "npsn": "10112857",
+    "nama_sekolah": "SMK NEGERI ULIM",
+    "k1_code": "2.2.2",
+    "k2_code": "2.2.2",
+    "k3_code": "6.2.2",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Ternak Unggas",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "6.2.2",
+        "master_name": "Agribisnis Ternak Unggas",
+        "score": 96
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 68,
+    "npsn": "69972006",
+    "nama_sekolah": "SMK BUDI",
+    "k1_code": "3.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Instalasi Tenaga Listrik",
+        "status": "MATCHED EXACT",
+        "master_code": "3.1.1",
+        "master_name": "Teknik Instalasi Tenaga Listrik",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 69,
+    "npsn": "10112856",
+    "nama_sekolah": "SMKN TRIENGGADENG",
+    "k1_code": "2.2.2",
+    "k2_code": "6.1.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "ATP",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 94
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 70,
+    "npsn": "69950731",
+    "nama_sekolah": "SMK UMMUL AYMAN 2",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 71,
+    "npsn": "10112509",
+    "nama_sekolah": "SMK NEGERI 1 SALANG",
+    "k1_code": "6.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "AGRIBISNIS TERNAK UNGGAS",
+        "status": "MATCHED EXACT",
+        "master_code": "6.2.2",
+        "master_name": "Agribisnis Ternak Unggas",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 72,
+    "npsn": "10103348",
+    "nama_sekolah": "SMK Negeri 2 Sinabang",
+    "k1_code": "2.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 73,
+    "npsn": "10111947",
+    "nama_sekolah": "SMK NEGERI 1 TEUPAH TENGAH",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 74,
+    "npsn": "69896252",
+    "nama_sekolah": "SMK NEGERI 1 SIMEULUE CUT",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 75,
+    "npsn": "10105724",
+    "nama_sekolah": "SMK NEGERI 2 LANGSA",
+    "k1_code": "2.2.1",
+    "k2_code": "2.5.3",
+    "k3_code": "6.2.1",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan (TKR)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 92
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Elektronika Industri",
+        "status": "MATCHED EXACT",
+        "master_code": "2.5.3",
+        "master_name": "Teknik Elektronika Industri",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "TPTU",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "6.2.1",
+        "master_name": "Agribisnis Ternak Ruminansia",
+        "score": 92
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 76,
+    "npsn": "10113917",
+    "nama_sekolah": "SMK NEGERI 6 LANGSA",
+    "k1_code": "5.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Layanan Penunjang Keperawatan dan caregiving",
+        "status": "MATCHED EXACT",
+        "master_code": "5.1.1",
+        "master_name": "Layanan Penunjang Keperawatan dan Caregiving",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 77,
+    "npsn": "10107115",
+    "nama_sekolah": "SMK NEGERI 5 LANGSA",
+    "k1_code": "4.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Jaringan Akses Telekomunikasi",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.2",
+        "master_name": "Teknik Jaringan Akses Telekomunikasi",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 78,
+    "npsn": "10105628",
+    "nama_sekolah": "SMK NEGERI 4 LHOKSEUMAWE",
+    "k1_code": "2.2.1",
+    "k2_code": "3.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Energi Surya, Hidro, dan Angin",
+        "status": "MATCHED EXACT",
+        "master_code": "3.2.1",
+        "master_name": "Teknik Energi Surya, Hidro, dan Angin",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 79,
+    "npsn": "10105629",
+    "nama_sekolah": "SMKS KARYA BERINGIN",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 80,
+    "npsn": "10110714",
+    "nama_sekolah": "SMKN 5 LHOKSEUMAWE",
+    "k1_code": "1.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Design Pemodelan dan Informasi Bangunan",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "1.1.1",
+        "master_name": "Teknik Perawatan Gedung",
+        "score": 91
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 81,
+    "npsn": "10111838",
+    "nama_sekolah": "SMK NEGERI 7 LHOKSEUMAWE",
+    "k1_code": "2.2.2",
+    "k2_code": "2.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 82,
+    "npsn": "10110650",
+    "nama_sekolah": "SMKS ULUMUDDIN",
+    "k1_code": "10.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain Komunikasi Visual (DKV)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "10.2.1",
+        "master_name": "Desain Komunikasi Visual",
+        "score": 92
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 83,
+    "npsn": "70003663",
+    "nama_sekolah": "SMK IT Pesantren Tabina Aceh",
+    "k1_code": "2.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Mekanik Industri",
+        "status": "MATCHED EXACT",
+        "master_code": "2.1.2",
+        "master_name": "Teknik Mekanik Industri",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 84,
+    "npsn": "10105704",
+    "nama_sekolah": "SMK N 1 LANGSA",
+    "k1_code": "8.3.3",
+    "k2_code": "8.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Akuntansi",
+        "status": "MATCHED EXACT",
+        "master_code": "8.3.3",
+        "master_name": "Akuntansi",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Management Perkantoran",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "8.2.1",
+        "master_name": "Manajemen Perkantoran",
+        "score": 85
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 85,
+    "npsn": "10105625",
+    "nama_sekolah": "SMK NEGERI 1 LHOKSEUMAWE",
+    "k1_code": "4.2.1",
+    "k2_code": "4.1.1",
+    "k3_code": "8.2.1",
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Rekayasa Perangkat Lunak",
+        "status": "MATCHED EXACT",
+        "master_code": "4.1.1",
+        "master_name": "Rekayasa Perangkat Lunak",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Manajemen Perkantoran",
+        "status": "MATCHED EXACT",
+        "master_code": "8.2.1",
+        "master_name": "Manajemen Perkantoran",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 86,
+    "npsn": "10105627",
+    "nama_sekolah": "SMK NEGERI 3 LHOKSEUMAWE",
+    "k1_code": "8.1.1",
+    "k2_code": "8.3.3",
+    "k3_code": "8.2.1",
+    "k4_code": "8.3.2",
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Bisnis Digital",
+        "status": "MATCHED EXACT",
+        "master_code": "8.1.1",
+        "master_name": "Bisnis Digital",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Akuntansi",
+        "status": "MATCHED EXACT",
+        "master_code": "8.3.3",
+        "master_name": "Akuntansi",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "Manajemen Perkantoran",
+        "status": "MATCHED EXACT",
+        "master_code": "8.2.1",
+        "master_name": "Manajemen Perkantoran",
+        "score": 100
+      },
+      {
+        "slot": 4,
+        "csv": "Layanan Perbankan Syariah",
+        "status": "MATCHED EXACT",
+        "master_code": "8.3.2",
+        "master_name": "Layanan Perbankan Syariah",
+        "score": 100
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 87,
+    "npsn": "10105626",
+    "nama_sekolah": "SMK NEGERI 2 LHOKSEUMAWE",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 88,
+    "npsn": "69758278",
+    "nama_sekolah": "SMKN 8 LHOKSEUMAWE",
+    "k1_code": "5.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Layanan Penunjang Laboratorium Medik",
+        "status": "MATCHED EXACT",
+        "master_code": "5.2.1",
+        "master_name": "Layanan Penunjang Laboratorium Medik",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 89,
+    "npsn": "10110769",
+    "nama_sekolah": "SMKN 6 Lhokseumawe",
+    "k1_code": "6.5.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Pengolahan Hasil Perikanan",
+        "status": "MATCHED EXACT",
+        "master_code": "6.5.2",
+        "master_name": "Agribisnis Pengolahan Hasil Perikanan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 90,
+    "npsn": "10111502",
+    "nama_sekolah": "SMK SWASTA MUHAMMADIYAH LHOKSUKON",
+    "k1_code": "8.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Manajemen Perkantoran",
+        "status": "MATCHED EXACT",
+        "master_code": "8.2.1",
+        "master_name": "Manajemen Perkantoran",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 91,
+    "npsn": "10112855",
+    "nama_sekolah": "SMKN 1 BANDAR BARU",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 92,
+    "npsn": "10100617",
+    "nama_sekolah": "SMK SWASTA MUTIARA",
+    "k1_code": "8.3.3",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Akuntansi",
+        "status": "MATCHED EXACT",
+        "master_code": "8.3.3",
+        "master_name": "Akuntansi",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 93,
+    "npsn": "10111935",
+    "nama_sekolah": "SMK NEGERI 1 TEUPAH SELATAN",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 94,
+    "npsn": "10103347",
+    "nama_sekolah": "SMK NEGERI 1 SINABANG",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 95,
+    "npsn": "69949251",
+    "nama_sekolah": "SMK NEGERI PERIKANAN SIMEULUE BARAT",
+    "k1_code": "6.3.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Perikanan Air Payau dan Laut",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "6.3.2",
+        "master_name": "Agribisnis Perikanan Payau dan Laut",
+        "score": 98
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 96,
+    "npsn": "10111684",
+    "nama_sekolah": "SMK Negeri 3 Sinabang",
+    "k1_code": "6.3.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Perikanan Air Payau dan Laut",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "6.3.2",
+        "master_name": "Agribisnis Perikanan Payau dan Laut",
+        "score": 98
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 97,
+    "npsn": "69754554",
+    "nama_sekolah": "SMKN 1 SIMPANG ALAHAN MATI",
+    "k1_code": "2.2.2",
+    "k2_code": "4.2.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 98,
+    "npsn": "10310878",
+    "nama_sekolah": "SMK N 1 RANAH BATAHAN",
+    "k1_code": "2.3.1",
+    "k2_code": "2.5.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Pengelasan",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.3.1",
+        "master_name": "Teknik Pengelasan",
+        "score": 95
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Audio Video",
+        "status": "MATCHED EXACT",
+        "master_code": "2.5.1",
+        "master_name": "Teknik Audio Video",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 99,
+    "npsn": "10306135",
+    "nama_sekolah": "SMK N 1 SASAK RANAH PASISIE",
+    "k1_code": "6.3.3",
+    "k2_code": "2.2.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Perikanan Air Tawar (APAT)",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "6.3.3",
+        "master_name": "Agribisnis Perikanan Air Tawar",
+        "score": 94
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Bisnis Sepeda Motor",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 78
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 100,
+    "npsn": "10301946",
+    "nama_sekolah": "SMKS TEKNOLOGI LENGAYANG",
+    "k1_code": "2.2.2",
+    "k2_code": "3.1.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Instalasi Tenaga Listrik",
+        "status": "MATCHED EXACT",
+        "master_code": "3.1.1",
+        "master_name": "Teknik Instalasi Tenaga Listrik",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 101,
+    "npsn": "10220646",
+    "nama_sekolah": "SMKN 1 TANJUNG PURA",
+    "k1_code": "2.2.1",
+    "k2_code": "2.2.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 102,
+    "npsn": "10260493",
+    "nama_sekolah": "SMKN 1 LUMUT",
+    "k1_code": "2.2.1",
+    "k2_code": "2.2.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 103,
+    "npsn": "69953551",
+    "nama_sekolah": "SMK SWASTA TAMAN SISWA PADANG TUALANG",
+    "k1_code": "2.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan  Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 104,
+    "npsn": "10259372",
+    "nama_sekolah": "SMKS SRI LANGKAT",
+    "k1_code": "2.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 105,
+    "npsn": "10220747",
+    "nama_sekolah": "SMK SWASTA TAMAN SISWA SAWIT SEBERANG",
+    "k1_code": "2.2.1",
+    "k2_code": "2.2.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 106,
+    "npsn": "69727256",
+    "nama_sekolah": "SMK Swasta Imelda Medan",
+    "k1_code": "2.2.2",
+    "k2_code": "3.1.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Instalasi Tenaga Listrik",
+        "status": "MATCHED EXACT",
+        "master_code": "3.1.1",
+        "master_name": "Teknik Instalasi Tenaga Listrik",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 107,
+    "npsn": "70044057",
+    "nama_sekolah": "SMK Negeri 1 Sukabangun",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 108,
+    "npsn": "10211209",
+    "nama_sekolah": "SMK TI SWASTA BUDI AGUNG MEDAN",
+    "k1_code": "2.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 109,
+    "npsn": "10208081",
+    "nama_sekolah": "SMKN 1 BATANG NATAL",
+    "k1_code": "4.2.1",
+    "k2_code": "2.5.1",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Audio Video",
+        "status": "MATCHED EXACT",
+        "master_code": "2.5.1",
+        "master_name": "Teknik Audio Video",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 110,
+    "npsn": "69956351",
+    "nama_sekolah": "SMK SWASTA TARUNA BANGSA",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 111,
+    "npsn": "10220604",
+    "nama_sekolah": "SMKN 1 PAHAE JULU",
+    "k1_code": "3.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Instalasi Tenaga Listrik",
+        "status": "MATCHED EXACT",
+        "master_code": "3.1.1",
+        "master_name": "Teknik Instalasi Tenaga Listrik",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 112,
+    "npsn": "10201068",
+    "nama_sekolah": "SMK PERSIAPAN PADANG TUALANG",
+    "k1_code": "2.2.1",
+    "k2_code": "2.2.2",
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Kendaraan Ringan",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.1",
+        "master_name": "Teknik Kendaraan Ringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 113,
+    "npsn": "10259283",
+    "nama_sekolah": "SMKS AL-MA'ARIF",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 114,
+    "npsn": "10260526",
+    "nama_sekolah": "SMKN 1 BADIRI",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 115,
+    "npsn": "69725097",
+    "nama_sekolah": "SMK SWASTA AL HIKMAH",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Sepeda Motor",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 116,
+    "npsn": "10210765",
+    "nama_sekolah": "SMKN 8 MEDAN",
+    "k1_code": "10.7.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Desain dan Produksi Busana",
+        "status": "MATCHED EXACT",
+        "master_code": "10.7.1",
+        "master_name": "Desain dan Produksi Busana",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 117,
+    "npsn": "10257578",
+    "nama_sekolah": "SMKS AL JAMIYATUL WASHLIYAH",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 118,
+    "npsn": "69956580",
+    "nama_sekolah": "SMK SWASTA AL-MAKSUM YAZID",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer  Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 119,
+    "npsn": "10259709",
+    "nama_sekolah": "SMKS MAJU",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer dan Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 120,
+    "npsn": "10206597",
+    "nama_sekolah": "SMKS TI MUHAMMADIYAH 11 SIBULUAN",
+    "k1_code": "2.2.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Bisnis Sepeda Motor",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "2.2.2",
+        "master_name": "Teknik Sepeda Motor",
+        "score": 78
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 121,
+    "npsn": "10201331",
+    "nama_sekolah": "SMKS HARAPAN BABALAN",
+    "k1_code": "8.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Manajemen Perkantoran",
+        "status": "MATCHED EXACT",
+        "master_code": "8.2.1",
+        "master_name": "Manajemen Perkantoran",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 122,
+    "npsn": "10260514",
+    "nama_sekolah": "SMKS MUHAMMADIYAH 18 P BERANDAN",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 123,
+    "npsn": "10211076",
+    "nama_sekolah": "SMKS YWKA Medan",
+    "k1_code": "8.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Manajemen Perkantoran",
+        "status": "MATCHED EXACT",
+        "master_code": "8.2.1",
+        "master_name": "Manajemen Perkantoran",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 124,
+    "npsn": "10260540",
+    "nama_sekolah": "SMK NEGERI 1 TAPIAN NAULI",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 125,
+    "npsn": "10208082",
+    "nama_sekolah": "SMKN 1 NATAL",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 126,
+    "npsn": "10220748",
+    "nama_sekolah": "SMKS YPII TANJUNG PURA",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 127,
+    "npsn": "10220618",
+    "nama_sekolah": "SMKN 1 BATANGTORU",
+    "k1_code": "6.1.2",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "status": "MATCHED EXACT",
+        "master_code": "6.1.2",
+        "master_name": "Agribisnis Tanaman Pangan dan Hortikultura",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 128,
+    "npsn": "60725063",
+    "nama_sekolah": "SMKN 2 BATANG TORU",
+    "k1_code": "2.2.3",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Alat Berat",
+        "status": "MATCHED EXACT",
+        "master_code": "2.2.3",
+        "master_name": "Teknik Alat Berat",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 129,
+    "npsn": "10220208",
+    "nama_sekolah": "SMKN LOSIDA SIATAS BARITA",
+    "k1_code": "4.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Teknik Komputer Jaringan",
+        "status": "MATCHED EXACT",
+        "master_code": "4.2.1",
+        "master_name": "Teknik Komputer dan Jaringan",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 130,
+    "npsn": "10201070",
+    "nama_sekolah": "SMKS PEMBANGUNAN NASIONAL PANGKALAN SUSU",
+    "k1_code": "8.2.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Manajemen Perkantoran",
+        "status": "MATCHED EXACT",
+        "master_code": "8.2.1",
+        "master_name": "Manajemen Perkantoran",
+        "score": 100
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  },
+  {
+    "no": 131,
+    "npsn": "69937373",
+    "nama_sekolah": "SMK SWASTA KESEHATAN RACHMAD INSANI",
+    "k1_code": "5.1.1",
+    "k2_code": null,
+    "k3_code": null,
+    "k4_code": null,
+    "k5_code": null,
+    "match_info": [
+      {
+        "slot": 1,
+        "csv": "Keperawatan",
+        "status": "DIJADIKAN SESUAI",
+        "master_code": "5.1.1",
+        "master_name": "Layanan Penunjang Keperawatan dan Caregiving",
+        "score": 93
+      },
+      {
+        "slot": 2,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 3,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 4,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      },
+      {
+        "slot": 5,
+        "csv": "",
+        "status": "KOSONG",
+        "master_code": "",
+        "master_name": "",
+        "score": 0
+      }
+    ]
+  }
+]

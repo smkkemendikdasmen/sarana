@@ -1,0 +1,41 @@
+version: "3.8"
+
+# ==============================================================
+# ONLYOFFICE Document Server — LOKAL DEVELOPMENT ONLY
+# Docs: https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx
+# Akses Web UI (Health Check):  http://localhost:9980/welcome
+# Document Editor API Endpoint:  http://localhost:9980/web-apps/apps/api/documents/api.js
+# ==============================================================
+
+services:
+  onlyoffice-documentserver:
+    image: onlyoffice/documentserver:latest
+    container_name: onlyoffice-documentserver-local
+    restart: unless-stopped
+    ports:
+      - "9980:80"
+    environment:
+      - JWT_ENABLED=false
+      - JWT_SECRET=
+      - JWT_HEADER=Authorization
+      - JWT_IN_BODY=false
+      - USE_UNAUTHORIZED_STORAGE=true
+    volumes:
+      - onlyoffice_logs:/var/log/onlyoffice
+      - onlyoffice_data:/var/www/onlyoffice/Data
+      - onlyoffice_db:/var/lib/postgresql
+      - onlyoffice_lib:/var/lib/onlyoffice
+      - onlyoffice_letsencrypt:/etc/letsencrypt
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:80/welcome"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+      start_period: 90s
+
+volumes:
+  onlyoffice_logs:
+  onlyoffice_data:
+  onlyoffice_db:
+  onlyoffice_lib:
+  onlyoffice_letsencrypt:

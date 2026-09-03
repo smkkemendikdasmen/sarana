@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-09-02T16:55:57.010Z",
+  "sourceCsv": "/Users/ilahilah/Documents/Project/PRISMA/saranasmk/docs/resouce/Data Pagu - Sheet1.csv",
+  "tahunAjaran": "2026/2027",
+  "csvParsed": 131,
+  "duplicateNpsnSkipped": 0,
+  "npsnUnmatched": [],
+  "npsnMatchedSchools": 131,
+  "paguUpdateCount": 131,
+  "paguInsertCount": 0,
+  "paguTotalProcessed": 131,
+  "sample": [
+    {
+      "npsn": "10110535",
+      "nama": "SMK Negeri 3 Aceh Barat Daya",
+      "persiapan": 9160000,
+      "alat": 2960000000,
+      "pelatihan": 40000000,
+      "total": 3009160000
+    },
+    {
+      "npsn": "10110536",
+      "nama": "SMK NEGERI 2 ACEH BARAT DAYA",
+      "persiapan": 9160000,
+      "alat": 2570000000,
+      "pelatihan": 30000000,
+      "total": 2609160000
+    },
+    {
+      "npsn": "10110273",
+      "nama": "SMKN 1 Arongan Lambalek",
+      "persiapan": 9160000,
+      "alat": 1970000000,
+      "pelatihan": 30000000,
+      "total": 2009160000
+    },
+    {
+      "npsn": "10110537",
+      "nama": "SMK NEGERI 5 ACEH BARAT DAYA",
+      "persiapan": 9160000,
+      "alat": 1580000000,
+      "pelatihan": 20000000,
+      "total": 1609160000
+    },
+    {
+      "npsn": "10102743",
+      "nama": "SMK NEGERI 1 TRUMON TIMUR",
+      "persiapan": 9160000,
+      "alat": 1970000000,
+      "pelatihan": 30000000,
+      "total": 2009160000
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+@page {
+  size: A4;
+  margin: 20mm 18mm;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #000;
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  line-height: 1.2;
+}
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20mm 18mm;
+  background: #fff;
+}
+
+@media screen {
+  body {
+    background: #f3f4f6;
+  }
+
+  .page {
+    margin: 12px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .page {
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+p {
+  margin: 0 0 6px 0;
+}
+
+.doc-title {
+  margin-bottom: 10px;
+}
+
+.doc-title p {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.doc-meta {
+  margin-bottom: 8px;
+}
+
+.doc-notes {
+  margin: 10px 0 8px;
+}
+
+ol,
+ul {
+  margin: 0 0 6px 18px;
+  padding-left: 16px;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+li {
+  margin: 0;
+}
+
+li > p {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 8px 0;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 4px 6px;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.num-cell {
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.money-cell {
+  white-space: nowrap;
+}
+
+.signature-gap td {
+  height: 22mm;
+}
+
+th {
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
