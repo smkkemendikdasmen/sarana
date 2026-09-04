@@ -274,6 +274,11 @@ class UpsertSchoolPaguBody {
   @Min(0)
   paguPelatihan!: number;
 
+  @IsInt()
+  @Min(0)
+  @IsOptional()
+  paguTotal?: number;
+
   @IsString()
   @IsIn(PAGU_ALLOWED_STATUS as unknown as string[])
   @IsOptional()
@@ -1096,6 +1101,7 @@ export class WorkspaceDataController {
       paguPersiapan: Math.max(0, Math.floor(Number(body.paguPersiapan) || 0)),
       paguAlat: Math.max(0, Math.floor(Number(body.paguAlat) || 0)),
       paguPelatihan: Math.max(0, Math.floor(Number(body.paguPelatihan) || 0)),
+      paguTotal: Math.max(0, Math.floor(Number(body.paguTotal) || 0)),
       status: (PAGU_ALLOWED_STATUS as readonly string[]).includes(String(body.status ?? "")) ? (body.status as PaguStatus) : "DRAFT",
       setByAdminId: userId,
       setByAdminName: userName,
@@ -1146,6 +1152,7 @@ export class WorkspaceDataController {
       paguPersiapan: Math.max(0, Math.floor(Number(body.paguPersiapan) || 0)),
       paguAlat: Math.max(0, Math.floor(Number(body.paguAlat) || 0)),
       paguPelatihan: Math.max(0, Math.floor(Number(body.paguPelatihan) || 0)),
+      paguTotal: Math.max(0, Math.floor(Number(body.paguTotal) || 0)),
       status: (PAGU_ALLOWED_STATUS as readonly string[]).includes(String(body.status ?? "")) ? (body.status as PaguStatus) : "DRAFT",
       setByAdminId: userId,
       setByAdminName: userName,
@@ -1224,6 +1231,7 @@ export class WorkspaceDataController {
         const paguPersiapan = toNum(row["Pagu Persiapan"] ?? row["PaguPersiapan"] ?? row["pagu_persiapan"] ?? row["persiapan"]);
         const paguAlat = toNum(row["Pagu Alat"] ?? row["PaguAlat"] ?? row["pagu_alat"] ?? row["alat"]);
         const paguPelatihan = toNum(row["Pagu Pelatihan"] ?? row["PaguPelatihan"] ?? row["pagu_pelatihan"] ?? row["pelatihan"]);
+        const paguTotal = toNum(row["Paagu Final"] ?? row["Pagu Final"] ?? row["pagu_total"] ?? row["paguTotal"] ?? row["total"] ?? 0);
 
         const statusRaw = String(row["Status"] ?? row["status"] ?? "").trim().toUpperCase();
         const status = (PAGU_ALLOWED_STATUS as readonly string[]).includes(statusRaw) ? (statusRaw as PaguStatus) : "DRAFT";
@@ -1242,6 +1250,7 @@ export class WorkspaceDataController {
           paguPersiapan,
           paguAlat,
           paguPelatihan,
+          paguTotal,
           status,
           setByAdminId: userId,
           setByAdminName: userName,

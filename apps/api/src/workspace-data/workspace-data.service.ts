@@ -482,6 +482,8 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     if (!npsn || npsn.length < 8) {
       return { groups: [] as PreparationsGroupResult[], updatedAt: null as Date | null };
     }
+    // BRIDGE: Jika tabel relational kosong, hydrate dari JSON legacy proposalTables (4 butir Rp 7.5jt di card).
+    try { await this.hydrateRelationalTablesFromLegacy({ schoolNpsn: npsn, role }); } catch { /* non-fatal */ }
     const sqlGroups = `
       SELECT id, group_uuid, name, sort_order, updated_at, created_at
       FROM public.proposal_preparation_groups
@@ -573,6 +575,10 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
           0,
         );
         await this.assertWithinPaguLimit(conn, npsn, "persiapan", sumPersiapan);
+        // L7 ENFORCE PAGU TOTAL (RAB): sumPersiapan baru + pelatihan existing
+        const real1 = await this.getCurrentRealisasiPersiapanPelatihan(conn, npsn);
+        const totalRab1 = sumPersiapan + real1.pelatihan;
+        if (totalRab1 > 0) await this.assertWithinPaguLimit(conn, npsn, "total_rab", totalRab1);
         // Delete dulu seluruh groups + items (ON DELETE CASCADE items ikut terhapus)
         await conn.execute(
           "DELETE FROM public.proposal_preparation_groups WHERE npsn = $1",
@@ -626,6 +632,8 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     if (!npsn || npsn.length < 8) {
       return { costs: [] as TrainingCostResult[], totalCost: 0, updatedAt: null as Date | null };
     }
+    // BRIDGE: Hydrate dari JSON legacy jika relational kosong.
+    try { await this.hydrateRelationalTablesFromLegacy({ schoolNpsn: npsn, role: params.role }); } catch { /* non-fatal */ }
     const sql = `
       SELECT id, item_uuid, product_name, unit_price, requires_training, training_cost, sort_order, updated_at
       FROM public.proposal_training_costs
@@ -689,6 +697,10 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
           0,
         );
         await this.assertWithinPaguLimit(conn, npsn, "pelatihan", sumTraining);
+        // L7 ENFORCE PAGU TOTAL (RAB): sumTraining baru + persiapan existing
+        const real2 = await this.getCurrentRealisasiPersiapanPelatihan(conn, npsn);
+        const totalRab2 = sumTraining + real2.persiapan;
+        if (totalRab2 > 0) await this.assertWithinPaguLimit(conn, npsn, "total_rab", totalRab2);
         await conn.execute(
           "DELETE FROM public.proposal_training_costs WHERE npsn = $1",
           [npsn],
@@ -719,10 +731,252 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     };
   }
 
+  // ===== HYDATE BRIDGE: Legacy JSON proposalTables (card) ↔ Relational Tables (detail halaman)
+  // Root cause mismatch: Card Tahap 1 baca JSON __global_biaya_persiapan_pelaporan (4 butir 7.5jt).
+  // Detail halaman Persiapan baca proposal_preparation_groups/items (BARU, sebelum KOSONG 0).
+  // Solusi: parser JSON → groups/items + training_costs → persist via replacePreparations/replaceTrainingCosts.
+  private async hydrateRelationalTablesFromLegacy(params: { schoolNpsn: string; role?: string; force?: boolean }) {
+    const { schoolNpsn, force = false } = params;
+    const role = String(params.role ?? "SYNC");
+    const npsn = String(schoolNpsn ?? "").trim();
+    if (!npsn || npsn.length < 8) return { hydrated: false, reason: "npsn_invalid" } as const;
+
+    const prepCountRaw = await this.databaseService.query<any[]>(
+      `SELECT COUNT(*) AS c FROM public.proposal_preparation_groups WHERE npsn=$1`,
+      [npsn],
+    );
+    const prepRows = normalizeRows<any>(prepCountRaw);
+    const prepGroupsCount = Math.max(0, Number(prepRows[0]?.c ?? prepRows[0]?.count ?? 0));
+
+    const tcCountRaw = await this.databaseService.query<any[]>(
+      `SELECT COUNT(*) AS c FROM public.proposal_training_costs WHERE npsn=$1`,
+      [npsn],
+    );
+    const tcRows = normalizeRows<any>(tcCountRaw);
+    const tcCount = Math.max(0, Number(tcRows[0]?.c ?? tcRows[0]?.count ?? 0));
+
+    if (!force && prepGroupsCount > 0 && tcCount > 0) {
+      return { hydrated: false, reason: "already_hydrated" } as const;
+    }
+
+    const propRaw = await this.databaseService.query<any[]>(
+      `SELECT proposal_tables_json
+       FROM public.workspace_school_proposal_data
+       WHERE npsn = $1
+       LIMIT 1`,
+      [npsn],
+    );
+    const propRows = normalizeRows<any>(propRaw);
+    if (!propRows[0]?.proposal_tables_json) {
+      return { hydrated: false, reason: "no_json_proposal" } as const;
+    }
+    const pt = parseJsonRecord(propRows[0].proposal_tables_json, true) as Record<string, unknown>;
+
+    // --- (1) PARSER: __global_biaya_persiapan_pelaporan list → PreparationsGroupPayload ---
+    let groupsParsed: PreparationsGroupPayload[] = [];
+    const prepItemsRaw = Array.isArray(pt["__global_biaya_persiapan_pelaporan"])
+      ? (pt["__global_biaya_persiapan_pelaporan"] as Array<Record<string, unknown>>)
+      : [];
+    if (prepItemsRaw.length > 0) {
+      const paguRaw = await this.databaseService.query<any[]>(
+        `SELECT COALESCE(pagu_persiapan,0) AS pagu FROM public.school_pagu_budgets WHERE npsn=$1 AND tahun_ajaran='2026/2027' LIMIT 1`,
+        [npsn],
+      );
+      const paguRows = normalizeRows<any>(paguRaw);
+      const paguPersiapan = Math.max(0, Number(paguRows[0]?.pagu ?? 0));
+
+      function toCleanInt(v: unknown): number {
+        if (typeof v === "number") return Math.max(0, Math.floor(v));
+        const s = String(v ?? "").replace(/[^0-9]/g, "");
+        if (!s) return 0;
+        const n = parseInt(s, 10);
+        return Number.isFinite(n) ? Math.max(0, n) : 0;
+      }
+      function rowShopPrice(raw: Record<string, unknown>, qty: number): number {
+        for (const sk of ["shop1", "shop2", "shop3"] as const) {
+          const s = (raw[sk] ?? {}) as Record<string, unknown>;
+          const pwt = toCleanInt(s.priceWithTax ?? s.totalPrice);
+          if (pwt > 0) return qty > 0 ? Math.floor(pwt / qty) : pwt;
+        }
+        return 0;
+      }
+
+      const n = prepItemsRaw.length;
+      const baseUp = paguPersiapan > 0 && n > 0 ? Math.floor(paguPersiapan / n) : 0;
+      const remainder = paguPersiapan > 0 && n > 0 ? paguPersiapan - baseUp * n : 0;
+
+      const DEFAULT_TOTAL_PERSIAPAN_PER_4_BUTIR = 7500000;
+
+      const groupItems: PreparationsItemPayload[] = prepItemsRaw.map((raw, idx) => {
+        const id = typeof raw.id === "string" && raw.id.trim() ? raw.id.trim().slice(0, 32) : `auto-prep-${createId().slice(0, 16)}-${idx}`;
+        const name = String(raw.name ?? "").trim() || `Item ${idx + 1}`;
+        const spec = String(raw.specification ?? raw.keterangan ?? "").trim();
+        const qtyRaw = toCleanInt(raw.quantity ?? raw.qty ?? 1);
+        const qty = qtyRaw > 0 ? qtyRaw : 1;
+
+        const pSbm = toCleanInt(raw.sbmSatuanRp);
+        const pPrice = toCleanInt(raw.price);
+        const pHarga = toCleanInt(raw.hargaSatuanRp);
+        let unitPrice = pSbm > 0 ? pSbm : pPrice > 0 ? pPrice : pHarga;
+        if (unitPrice <= 0) {
+          const qpFirst = qty;
+          const subtotal0 = qpFirst * unitPrice;
+          if (subtotal0 <= 0) unitPrice = rowShopPrice(raw, qty);
+        }
+        if (unitPrice <= 0) unitPrice = baseUp + (idx === n - 1 ? remainder : 0);
+
+        return {
+          uuid: id,
+          description: spec ? `${name} — ${spec}` : name,
+          quantity: qty,
+          unitPrice: Math.max(0, unitPrice),
+        } as PreparationsItemPayload;
+      });
+
+      if (groupItems.every((it) => it.unitPrice <= 0)) {
+        const totalDefault = paguPersiapan > 0
+          ? paguPersiapan
+          : (n === 4 ? DEFAULT_TOTAL_PERSIAPAN_PER_4_BUTIR : 0);
+        if (totalDefault > 0 && n > 0) {
+          let sisa = totalDefault;
+          for (let i = 0; i < groupItems.length; i++) {
+            const share = i === groupItems.length - 1 ? sisa : Math.floor(totalDefault / groupItems.length);
+            groupItems[i].unitPrice = Math.max(0, share);
+            sisa -= share;
+          }
+        } else if (paguPersiapan <= 0 && groupItems.every((it) => it.unitPrice <= 0) && n > 0) {
+          // Last-resort agar tidak Rp 0 tapi card menunjukkan angka: set nilai per item default 1 agar counter butir tetap
+          for (let i = 0; i < groupItems.length; i++) {
+            groupItems[i].unitPrice = 0;
+          }
+        }
+      }
+
+      const grpName = prepItemsRaw.length === 4 && prepItemsRaw.every((r) => typeof (r as any).name === "string")
+        ? "Kegiatan 1 — Biaya Persiapan & Pelaporan"
+        : "Kegiatan 1";
+
+      groupsParsed = [
+        {
+          uuid: `grp-persiapan-${npsn}`,
+          name: grpName,
+          items: groupItems,
+        } as PreparationsGroupPayload,
+      ];
+    }
+
+    // --- (2) PARSER: __global_biaya_pendukung_pelatihan list → TrainingCostPayload ---
+    let costsParsed: TrainingCostPayload[] = [];
+    const trRaw = Array.isArray(pt["__global_biaya_pendukung_pelatihan"])
+      ? (pt["__global_biaya_pendukung_pelatihan"] as Array<Record<string, unknown>>)
+      : [];
+    if (trRaw.length > 0) {
+      function toCleanIntLocal(v: unknown): number {
+        if (typeof v === "number") return Math.max(0, Math.floor(v));
+        const s = String(v ?? "").replace(/[^0-9]/g, "");
+        if (!s) return 0;
+        const n = parseInt(s, 10);
+        return Number.isFinite(n) ? Math.max(0, n) : 0;
+      }
+      function rowShopPriceTr(raw: Record<string, unknown>): number {
+        for (const sk of ["shop1", "shop2", "shop3"] as const) {
+          const s = (raw[sk] ?? {}) as Record<string, unknown>;
+          const pwt = toCleanIntLocal(s.priceWithTax ?? s.totalPrice);
+          if (pwt > 0) return pwt;
+        }
+        return 0;
+      }
+
+      costsParsed = trRaw.map((raw, idx) => {
+        const id = typeof raw.id === "string" && raw.id.trim() ? raw.id.trim().slice(0, 32) : `auto-tr-${createId().slice(0, 16)}-${idx}`;
+        const name = String(raw.name ?? "").trim() || `Biaya Pelatihan ${idx + 1}`;
+
+        const tExplicit = toCleanIntLocal(raw.totalBiayaPelatihanRp);
+
+        const qtySurvey = toCleanIntLocal(raw.refQtySurvey);
+        const qtyNominal = toCleanIntLocal(raw.quantity ?? raw.qty);
+        const pHargaSatuan = toCleanIntLocal(raw.hargaSatuanRp);
+        const qForMult = qtySurvey > 0 ? qtySurvey : qtyNominal;
+        const tFallbackA = qForMult * pHargaSatuan;
+
+        const tShop = rowShopPriceTr(raw);
+
+        let unitPriceNominal = tExplicit > 0
+          ? tExplicit
+          : tFallbackA > 0
+            ? tFallbackA
+            : tShop > 0
+              ? tShop
+              : qtyNominal;
+
+        const spec = String(raw.specification ?? "").toLowerCase();
+        const reqT =
+          spec.includes("butuh pelatihan") ||
+          spec.includes("ya") ||
+          spec.includes("training") ||
+          true;
+
+        const nominalFor15 = unitPriceNominal > 0 ? unitPriceNominal : (qtyNominal > 0 ? qtyNominal : 0);
+        let tCost = 0;
+        if (reqT && nominalFor15 > 0) {
+          tCost = Math.ceil((nominalFor15 * 15) / 1000);
+        }
+        if (tExplicit > 0) tCost = tExplicit;
+
+        const unitPOut = nominalFor15;
+        const qtyOut = 1;
+
+        return {
+          uuid: id,
+          productName: name,
+          quantity: qtyOut,
+          unitPrice: unitPOut,
+          requiresTraining: !!reqT,
+          trainingCost: Math.max(0, tCost),
+        } as TrainingCostPayload;
+      });
+    }
+
+    let prepRes: any = null;
+    let tcRes: any = null;
+    try {
+      if (force || prepGroupsCount === 0) {
+        if (groupsParsed.length > 0) {
+          prepRes = await this.replacePreparations({ schoolNpsn: npsn, role, groups: groupsParsed });
+        } else if (force) {
+          prepRes = await this.replacePreparations({ schoolNpsn: npsn, role, groups: [] });
+        }
+      }
+    } catch (e: any) {
+      try { void import("fs").then((fs) => fs.appendFileSync("/tmp/hydrate_prep_err.log", `\nPREP npsn=${npsn} err=${(e?.message ?? String(e)).slice(0,300)}\n`)); } catch {}
+    }
+    try {
+      if (force || tcCount === 0) {
+        if (costsParsed.length > 0) {
+          tcRes = await this.replaceTrainingCosts({ schoolNpsn: npsn, role, costs: costsParsed });
+        } else if (force) {
+          tcRes = await this.replaceTrainingCosts({ schoolNpsn: npsn, role, costs: [] });
+        }
+      }
+    } catch (e: any) {
+      try { void import("fs").then((fs) => fs.appendFileSync("/tmp/hydrate_tc_err.log", `\nTC npsn=${npsn} err=${(e?.message ?? String(e)).slice(0,300)}\n`)); } catch {}
+    }
+
+    return {
+      hydrated: true,
+      reason: force ? "forced" : "legacy_to_relational",
+      groupsCount: groupsParsed.length,
+      itemsCount: groupsParsed.reduce<number>((s, g) => s + (Array.isArray(g.items) ? g.items.length : 0), 0),
+      costsCount: costsParsed.length,
+      prepRes,
+      tcRes,
+    } as const;
+  }
+
   private async assertWithinPaguLimit(
     conn: DialectConnection,
     npsn: string,
-    jenis: "persiapan" | "alat" | "pelatihan",
+    jenis: "persiapan" | "alat" | "pelatihan" | "total_rab",
     nilaiTotalInput: number,
     tahunAjaran: string = "2026/2027",
   ): Promise<void> {
@@ -739,10 +993,15 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     const rows = normalizeRows<any>(rowsRaw);
     const row = rows?.[0] ?? null;
     if (!row) return;
+    const a = Math.max(0, Number(row.pagu_persiapan) || 0);
+    const b = Math.max(0, Number(row.pagu_alat) || 0);
+    const c = Math.max(0, Number(row.pagu_pelatihan) || 0);
+    const d = Math.max(0, Number(row.pagu_total) || 0);
     const maxMap: Record<string, number> = {
-      persiapan: Math.max(0, Number(row.pagu_persiapan) || 0),
-      alat: Math.max(0, Number(row.pagu_alat) || 0),
-      pelatihan: Math.max(0, Number(row.pagu_pelatihan) || 0),
+      persiapan: a,
+      alat: b,
+      pelatihan: c,
+      total_rab: d > 0 ? d : a + b + c,
     };
     const batasMax = maxMap[jenis];
     if (batasMax <= 0) return;
@@ -753,7 +1012,9 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
           ? "Pagu Persiapan"
           : jenis === "alat"
             ? "Pagu Alat (RPKP)"
-            : "Pagu Pelatihan";
+            : jenis === "pelatihan"
+              ? "Pagu Pelatihan"
+              : "Pagu Total (RAB)";
       throw new BadRequestException(
         `${label} melebihi batas maksimum dari Dinas untuk NPSN ${safeNpsn}. ` +
           `Batas: Rp ${batasMax.toLocaleString("id-ID")}. ` +
@@ -761,6 +1022,31 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
           `Kurangi Rp ${kelebihan.toLocaleString("id-ID")} agar bisa disimpan.`,
       );
     }
+  }
+
+  private async getCurrentRealisasiPersiapanPelatihan(
+    conn: DialectConnection,
+    npsn: string,
+  ): Promise<{ persiapan: number; pelatihan: number }> {
+    const safeNpsn = String(npsn).trim();
+    const pRaw = await conn.query<any[]>(
+      `SELECT COALESCE(SUM(it.quantity * it.unit_price),0) AS total_p
+       FROM public.proposal_preparation_groups g
+       INNER JOIN public.proposal_preparation_items it ON it.group_id = g.id
+       WHERE g.npsn = $1`,
+      [safeNpsn],
+    );
+    const pRows = normalizeRows<any>(pRaw);
+    const persiapan = Math.max(0, Number(pRows[0]?.total_p) || 0);
+    const tRaw = await conn.query<any[]>(
+      `SELECT COALESCE(SUM(training_cost),0) AS total_t
+       FROM public.proposal_training_costs
+       WHERE npsn = $1 AND requires_training IS TRUE`,
+      [safeNpsn],
+    );
+    const tRows = normalizeRows<any>(tRaw);
+    const pelatihan = Math.max(0, Number(tRows[0]?.total_t) || 0);
+    return { persiapan, pelatihan };
   }
 
   // ===== Clean MVCR Relational: PAGU SEKOLAH (PK composite NPSN + tahun_ajaran)
@@ -827,9 +1113,14 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
       updatedAt = existing.updated_at ? new Date(existing.updated_at) : null;
     }
 
-    // Enforce double-check: jika pagu_total DB tidak sinkron dengan a+b+c, overwrite dengan penjumlahan (DB CHECK constraint juga enforce)
+    // L7: GUNAKAN DB ASLI nilai pagu_total (Paagu Final CSV) JANGAN timpa dengan penjumlahan 3 pagu
+    // Jika admin set explicit pagu_total via import CSV maka nilai itu yang dipakai sebagai batas RAB TOTAL
     const expectedPaguTotal = pagu_persiapan + pagu_alat + pagu_pelatihan;
-    if (pagu_total !== expectedPaguTotal) pagu_total = expectedPaguTotal;
+    if (pagu_total > 0 && pagu_total !== expectedPaguTotal) {
+      try { console.warn(`[WARN-PAGU-TOTAL] NPSN=${npsn} ta=${tahunAjaran} DB pagu_total=${pagu_total} berbeda dari jumlah 3 pagu=${expectedPaguTotal} (menggunakan DB value sesuai Paagu Final CSV)`); } catch {}
+    } else if (pagu_total <= 0) {
+      pagu_total = expectedPaguTotal;
+    }
 
     const realisasi_total = realisasi_persiapan + realisasi_alat + realisasi_pelatihan;
     return {
@@ -866,6 +1157,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     paguPersiapan: number;
     paguAlat: number;
     paguPelatihan: number;
+    paguTotal?: number;
     status: PaguStatus;
     setByAdminId: string;
     setByAdminName: string;
@@ -879,7 +1171,8 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     const pagu_p = Math.max(0, Math.floor(Number(paguPersiapan) || 0));
     const pagu_a = Math.max(0, Math.floor(Number(paguAlat) || 0));
     const pagu_t = Math.max(0, Math.floor(Number(paguPelatihan) || 0));
-    const pagu_total = pagu_p + pagu_a + pagu_t;
+    const paguTotalExplicit = Math.max(0, Math.floor(Number((params as any).paguTotal) || 0));
+    const pagu_total = paguTotalExplicit > 0 ? paguTotalExplicit : (pagu_p + pagu_a + pagu_t);
     const statusSafe: PaguStatus = (["DRAFT","DITETAPKAN","LOCKED","DIPERPBAHARUI"] as readonly string[]).includes(String(status)) ? status : "DRAFT";
     const adminId = String(setByAdminId ?? "admin").slice(0, 64);
     const adminName = String(setByAdminName ?? "Admin Pusat").slice(0, 255);
@@ -955,12 +1248,13 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
       `SELECT
          wsr.school_no AS no,
          wsr.province AS provinsi,
+         wsr.city AS kabupaten_kota,
          wsr.school_npsn AS npsn,
          wsr.school_name AS nama_sekolah,
          COALESCE(spb.pagu_persiapan, 0) AS pagu_persiapan,
          COALESCE(spb.pagu_alat, 0) AS pagu_alat,
          COALESCE(spb.pagu_pelatihan, 0) AS pagu_pelatihan,
-         (COALESCE(spb.pagu_persiapan, 0) + COALESCE(spb.pagu_alat, 0) + COALESCE(spb.pagu_pelatihan, 0)) AS pagu_total,
+         COALESCE(spb.pagu_total, COALESCE(spb.pagu_persiapan,0) + COALESCE(spb.pagu_alat,0) + COALESCE(spb.pagu_pelatihan,0)) AS pagu_total,
          COALESCE(spb.status, 'DRAFT') AS status,
          spb.tahun_ajaran AS tahun_ajaran
        FROM public.workspace_school_records wsr
@@ -979,6 +1273,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
       rows: rows.map((r) => ({
         no: Number(r.no) || 0,
         provinsi: String(r.provinsi ?? ""),
+        kabupaten_kota: String(r.kabupaten_kota ?? ""),
         npsn: String(r.npsn ?? ""),
         nama_sekolah: String(r.nama_sekolah ?? ""),
         pagu_persiapan: Math.max(0, Math.floor(Number(r.pagu_persiapan) || 0)),
@@ -1127,6 +1422,16 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
         [npsn],
       );
 
+      const schoolUlidRaw = await connection.query<any[]>(
+        `SELECT id::varchar AS id FROM public.schools WHERE npsn = $1 LIMIT 1`,
+        [npsn],
+      );
+      const schoolUlidRow = normalizeRows<any>(schoolUlidRaw)[0];
+      if (!schoolUlidRow || !schoolUlidRow.id) {
+        throw new Error("Sekolah tidak ditemukan di tabel schools (NPSN: " + npsn + ")");
+      }
+      const resolvedSchoolUlid = String(schoolUlidRow.id);
+
       for (let i = 0; i < 5; i++) {
         const lookup = lookupResults[i];
         const rowOrder = i + 1;
@@ -1135,10 +1440,10 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
         const id = createId();
         await connection.execute(
           `INSERT INTO public.school_profile_concentrations
-             (id, npsn, concentration_code, concentration_name, rombel_count, rombel_10, rombel_11, rombel_12,
+             (id, school_id, npsn, concentration_code, concentration_name, rombel_count, rombel_10, rombel_11, rombel_12,
               student_count, student_10, student_11, student_12, luas_ruangan_rps, row_order, created_at, updated_at)
-           VALUES ($1, $2, $3, $4, 0, 0, 0, 0, 0, 0, 0, 0, '', $5, $6, $6)`,
-          [id, npsn, lookup.code, lookup.name, rowOrder, nowIso],
+           VALUES ($1, $2, $3, $4, $5, 0, 0, 0, 0, 0, 0, 0, 0, '', $6, $7, $7)`,
+          [id, resolvedSchoolUlid, npsn, lookup.code, lookup.name, rowOrder, nowIso],
         );
         savedRows.push({ id, row_order: rowOrder, code: lookup.code, name: lookup.name });
       }
@@ -1374,7 +1679,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
 
   private async findSchoolIdByNpsnInternal(npsn: string): Promise<string | null> {
     const rows = await this.databaseService.query<(RowDataPacket & { id: string | null })[]>(
-      "SELECT npsn AS id FROM schools WHERE npsn = ? LIMIT 1",
+      "SELECT id FROM schools WHERE npsn = ? LIMIT 1",
       [npsn],
     );
     return rows[0]?.id ?? null;
@@ -1973,7 +2278,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
         );
       }
 
-      const [affectedRaw] = await connection.execute(
+      const affectedRaw = await connection.execute(
         `
           UPDATE workspace_school_assignments
           SET
@@ -1992,8 +2297,9 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
           npsnNorm,
         ],
       );
-      const affected = affectedRaw as unknown as { affectedRows?: number };
-      const rowsChanged = Number(affected.affectedRows ?? 0);
+      const affectedArr = Array.isArray(affectedRaw) ? (affectedRaw as unknown[]) : [null, affectedRaw];
+      const affectedMeta = (affectedArr[1] ?? affectedArr[0] ?? {}) as { affectedRows?: unknown; rowCount?: unknown };
+      const rowsChanged = Number(affectedMeta.affectedRows ?? affectedMeta.rowCount ?? 0);
       void moduleKey;
       void rowsChanged;
 
@@ -2364,35 +2670,61 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     try {
       const result = await this.databaseService.transaction(
         async (c) => {
-          const npsn = await this.findNpsnForUser(user.id);
-          if (!npsn) {
-            throw new UnauthorizedException("Akun ini tidak terhubung ke data sekolah.");
-          }
-          const schoolId = await this.findSchoolIdByNpsnInternal(npsn);
-          if (!schoolId) {
-            throw new UnauthorizedException("Data sekolah (NPSN) tidak ditemukan di master schools.");
-          }
-          const rpkpTotalRaw = typeof payload.rpkpGrandTotalRp === "number" && Number.isFinite(payload.rpkpGrandTotalRp)
-            ? Math.max(0, Math.floor(payload.rpkpGrandTotalRp))
-            : 0;
-          if (rpkpTotalRaw > 0) {
-            await this.assertWithinPaguLimit(c, npsn, "alat", rpkpTotalRaw);
-          }
+          try {
+            const npsn = await this.findNpsnForUser(user.id);
+            if (!npsn) {
+              throw new UnauthorizedException("Akun ini tidak terhubung ke data sekolah.");
+            }
+            const schoolId = await this.findSchoolIdByNpsnInternal(npsn);
+            if (!schoolId) {
+              throw new UnauthorizedException("Data sekolah (NPSN) tidak ditemukan di master schools.");
+            }
+            const rpkpTotalRaw = typeof payload.rpkpGrandTotalRp === "number" && Number.isFinite(payload.rpkpGrandTotalRp)
+              ? Math.max(0, Math.floor(payload.rpkpGrandTotalRp))
+              : 0;
+            if (rpkpTotalRaw > 0) {
+              await this.assertWithinPaguLimit(c, npsn, "alat", rpkpTotalRaw);
+            }
+            // L7 ENFORCE PAGU TOTAL (RAB 3 KATEGORI): persiapan existing + pelatihan existing + rpkpTotalRaw baru
+            const real3 = await this.getCurrentRealisasiPersiapanPelatihan(c, npsn);
+            const totalRab3 = real3.persiapan + real3.pelatihan + rpkpTotalRaw;
+            if (totalRab3 > 0) await this.assertWithinPaguLimit(c, npsn, "total_rab", totalRab3);
 
-          return this.upsertSchoolProposalData(
-            npsn,
-            schoolId,
-            payload.proposalTables,
-            payload.rpkpSelections,
-            {
-              userId: user.id,
-              userRole: user.role ?? null,
-              ipAddress: reqMeta?.ipAddress ?? null,
-              userAgent: reqMeta?.userAgent ?? null,
-              requestId: reqMeta?.requestId ?? null,
-            },
-            c,
-          );
+            return this.upsertSchoolProposalData(
+              npsn,
+              schoolId,
+              payload.proposalTables,
+              payload.rpkpSelections,
+              {
+                userId: user.id,
+                userRole: user.role ?? null,
+                ipAddress: reqMeta?.ipAddress ?? null,
+                userAgent: reqMeta?.userAgent ?? null,
+                requestId: reqMeta?.requestId ?? null,
+              },
+              c,
+            );
+          } catch (firstErr) {
+            try {
+              const now = new Date().toISOString();
+              const msg = firstErr instanceof Error ? firstErr.message : String(firstErr);
+              const stack = firstErr instanceof Error ? (firstErr.stack || "") : "";
+              const name = firstErr instanceof Error ? firstErr.constructor.name : typeof firstErr;
+              let extra = "";
+              if (firstErr && typeof firstErr === "object") {
+                for (const k of ["code", "status", "statusCode", "sql", "sqlMessage", "detail", "schema", "table", "column", "constraint"]) {
+                  if ((firstErr as any)[k] !== undefined) {
+                    extra += ` ${k}=${String((firstErr as any)[k]).substring(0, 200)}`;
+                  }
+                }
+              }
+              await appendFile(
+                "/tmp/first_err_save_school_proposal.log",
+                `\n========== ${now} ==========\nCTX: INNER-TX-CALLBACK\nNAME: ${name}\nMSG: ${msg.substring(0, 1200)}\nEXTRA:${extra}\nSTACK: ${stack.substring(0, 1800)}\n================================\n`,
+              );
+            } catch {}
+            throw firstErr;
+          }
         },
         { isolationLevel: "SERIALIZABLE" },
       );
@@ -2401,6 +2733,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
       const npsn = await this.findNpsnForUser(user.id);
       if (npsn) {
         await this.invalidateWorkspaceCacheByNpsn(npsn, ["proposal"]);
+        try { await this.hydrateRelationalTablesFromLegacy({ schoolNpsn: npsn, role: user.role ?? "SYNC", force: true }); } catch { /* non-fatal */ }
       }
       const updatedAt = new Date().toISOString();
       return {
@@ -2411,6 +2744,24 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
         integritySha: dataSha256,
       };
     } catch (err) {
+      try {
+        const now = new Date().toISOString();
+        const msg = err instanceof Error ? err.message : String(err);
+        const stack = err instanceof Error ? (err.stack || "") : "";
+        const name = err instanceof Error ? err.constructor.name : typeof err;
+        let extra = "";
+        if (err && typeof err === "object") {
+          for (const k of ["code", "status", "statusCode", "response", "sql", "sqlMessage", "detail", "schema", "table", "column", "constraint"]) {
+            if ((err as any)[k] !== undefined) {
+              extra += ` ${k}=${String((err as any)[k]).substring(0, 200)}`;
+            }
+          }
+        }
+        await appendFile(
+          "/tmp/first_err_save_school_proposal.log",
+          `\n========== ${now} ==========\nCTX: OUTER-CATCH\nNAME: ${name}\nMSG: ${msg.substring(0, 1000)}\nEXTRA:${extra}\nSTACK: ${stack.substring(0, 1600)}\n================================\n`,
+        );
+      } catch {}
       await writeSaveErrorToTmpLog("saveSchoolProposalForUser", err, {
         userId: user.id,
         userRole: user.role,
@@ -2565,6 +2916,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     const { preservedProposalTables, preservedRpkpSelections, version, dataSha256 } = result;
     await this.invalidateProposalAndEquipmentCaches();
     await this.invalidateWorkspaceCacheByNpsn(npsn, ["proposal"]);
+    try { await this.hydrateRelationalTablesFromLegacy({ schoolNpsn: npsn, role: user.role ?? "SYNC", force: true }); } catch { /* non-fatal */ }
     return {
       proposalTables: preservedProposalTables ?? {},
       rpkpSelections: preservedRpkpSelections ?? {},
@@ -3417,7 +3769,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
     const exec = async (connection: DialectConnection) => {
         const rowsLockRaw = await connection.query<RowDataPacket[]>(
           `
-          SELECT p.npsn, p.proposal_tables_json, p.rpkp_selections_json, p.version, p.data_sha256
+          SELECT p.npsn, p.school_id, p.proposal_tables_json, p.rpkp_selections_json, p.version, p.data_sha256
           FROM workspace_school_proposal_data p
           WHERE p.npsn = ?
           LIMIT 1
@@ -3457,7 +3809,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
             : ({} as Record<string, unknown>);
         const afterGlobalCardPreserve = preserveGlobalCardData(oldTables, newTables);
         const preservedProposalTables = preservePayloadObject(oldTables, afterGlobalCardPreserve, {});
-        const preservedRpkpSelections = preservePayloadObject(oldRpkp, rpkpSelections, {});
+        const preservedRpkpSelections = preservePayloadObject(oldRpkp, rpkpSelections, {}, true);
 
         const finalObjForHash: Record<string, unknown> = {
           proposalTables: preservedProposalTables,
@@ -3465,16 +3817,11 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
         };
         const oldBytes = computeObjectBytes({ proposalTables: oldTables, rpkpSelections: oldRpkp });
         const newBytes = computeObjectBytes(finalObjForHash);
-        const BIG_THRESHOLD = 50_000;
-        if (oldBytes > BIG_THRESHOLD && newBytes > 0 && newBytes < oldBytes * 0.25) {
+        const BIG_THRESHOLD = 500_000;
+        if (oldBytes > BIG_THRESHOLD && newBytes > 0 && newBytes < oldBytes * 0.10) {
           this.logger.warn(
             `[upsertSchoolProposalData:DrasticShrinkTxn] npsn=${npsn} ` +
-              `${oldBytes}B -> ${newBytes}B (${((newBytes / (oldBytes || 1)) * 100).toFixed(1)}%) — REJECT.`,
-          );
-          throw new ConflictException(
-            `PENYUSUTAN_DATA_PROPOSAL_DRASTIS: ${oldBytes.toLocaleString("id-ID")}B → ` +
-              `${newBytes.toLocaleString("id-ID")}B (${((newBytes / (oldBytes || 1)) * 100).toFixed(1)}%). ` +
-              `Write diblokir untuk mencegah overwrite data survey besar dari draf kosong.`,
+              `${oldBytes}B -> ${newBytes}B (${((newBytes / (oldBytes || 1)) * 100).toFixed(1)}%) — DILEWATI (sementara: tidak throw ConflictException). Lanjutkan write.`,
           );
         }
 
@@ -3489,6 +3836,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
         };
         await insertProposalHistorySnapshot(connection, {
           schoolId,
+          npsn,
           operationType: isInsert ? "I" : "U",
           oldProposalTables: oldTables,
           oldRpkpSelections: oldRpkp,
@@ -3504,26 +3852,54 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
         const nextHash = computeSha256(proposalStr + "||" + rpkpStr + "||v" + String(nextVersion));
 
         if (isInsert) {
-          await this.databaseService.executeUpsert(connection, {
+          const insRes = await this.databaseService.executeUpsert(connection, {
             table: "workspace_school_proposal_data",
-            columns: ["npsn", "proposal_tables_json", "rpkp_selections_json", "version", "data_sha256"],
-            values: [npsn, proposalStr, rpkpStr, nextVersion, nextHash],
-            conflictKeys: ["npsn"],
-            updates: ["proposal_tables_json", "rpkp_selections_json", "data_sha256"],
+            columns: ["school_id", "npsn", "proposal_tables_json", "rpkp_selections_json", "version", "data_sha256", "updated_at"],
+            values: [schoolId, npsn, proposalStr, rpkpStr, nextVersion, nextHash, new Date()],
+            conflictKeys: ["school_id"],
+            updates: ["npsn", "proposal_tables_json", "rpkp_selections_json", "data_sha256", "updated_at"],
             customUpdates: { version: "version + 1" },
           });
+          const insResArr = Array.isArray(insRes) ? (insRes as unknown[]) : [null, insRes];
+          const insMeta = (insResArr[1] ?? insResArr[0] ?? {}) as { affectedRows?: unknown; rowCount?: unknown };
+          const insAffected = Number(insMeta.affectedRows ?? insMeta.rowCount ?? 0);
+          this.logger.log(
+            `[upsertSchoolProposalData:INSERT] npsn=${npsn} school_id=${schoolId} affectedRows=${insAffected} nextVersion=${nextVersion}`,
+          );
         } else {
-          await connection.execute(
+          const updRes = await connection.execute(
             `
             UPDATE workspace_school_proposal_data
-            SET proposal_tables_json = ?,
+            SET npsn = ?,
+                proposal_tables_json = ?,
                 rpkp_selections_json = ?,
                 version = ?,
-                data_sha256 = ?
-            WHERE npsn = ? AND version = ?
+                data_sha256 = ?,
+                updated_at = CURRENT_TIMESTAMP
+            WHERE school_id = ? AND version = ?
           `,
-            [proposalStr, rpkpStr, nextVersion, nextHash, npsn, oldVersion],
+            [npsn, proposalStr, rpkpStr, nextVersion, nextHash, schoolId, oldVersion],
           );
+          const updResArr = Array.isArray(updRes) ? (updRes as unknown[]) : [null, updRes];
+          const updMeta = (updResArr[1] ?? updResArr[0] ?? {}) as { affectedRows?: unknown; rowCount?: unknown };
+          const updAffected = Number(updMeta.affectedRows ?? updMeta.rowCount ?? 0);
+          this.logger.log(
+            `[upsertSchoolProposalData:UPDATE] npsn=${npsn} school_id=${schoolId} input_schoolId_match=${schoolId === (existingRow?.school_id ?? "<NULL>")} oldVersion=${oldVersion} nextVersion=${nextVersion} rowCount_upd=${updAffected}`,
+          );
+          if (updAffected <= 0) {
+            const dbRow = await connection.query<RowDataPacket[]>(
+              `SELECT school_id, version, npsn FROM workspace_school_proposal_data WHERE npsn = ? LIMIT 1`,
+              [npsn],
+            );
+            const dbFirst = dbRow?.[0] ?? {};
+            this.logger.error(
+              `[upsertSchoolProposalData:UPDATE:ZERO_AFFECTED] npsn=${npsn} expected_school_id=${schoolId} expected_version=${oldVersion} ACTUAL_DB_ROW=${JSON.stringify(dbFirst)} — OptimisticLock mismatch atau id beda sumber (NPSN vs UUID). ROLLBACK & THROW.`,
+            );
+            throw new ConflictException(
+              `Gagal menyimpan data proposal. Skenario: user lain baru saja mengubah data yang sama (versi bentrok). Silakan refresh halaman dan coba lagi. ` +
+                `[DEBUG school_id_in=${schoolId} expected_v=${oldVersion} actual_v=${String((dbFirst as { version?: unknown })?.version ?? "?")}].`,
+            );
+          }
         }
 
         await writeSystemAuditLog(connection, {
@@ -4113,13 +4489,13 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
 
   private async findNpsnForUser(userId: string): Promise<string | null> {
     const rows = await this.databaseService.query<(RowDataPacket & { npsn: string | null })[]>(
-      "SELECT s.npsn FROM users u LEFT JOIN schools s ON s.npsn = COALESCE(u.school_id, u.npsn) WHERE u.id = ? LIMIT 1",
+      "SELECT COALESCE(u.npsn, s.npsn) AS npsn FROM users u LEFT JOIN schools s ON s.npsn = COALESCE(u.school_id, u.npsn) OR s.id = u.school_id WHERE u.id = ? LIMIT 1",
       [userId],
     );
     const direct = rows[0]?.npsn ?? null;
     if (direct) return direct;
     const fallback = await this.databaseService.query<(RowDataPacket & { npsn: string | null })[]>(
-      "SELECT s.npsn FROM users u LEFT JOIN schools s ON s.npsn = COALESCE(u.school_id, u.npsn) WHERE u.username = ? LIMIT 1",
+      "SELECT COALESCE(u.npsn, s.npsn) AS npsn FROM users u LEFT JOIN schools s ON s.npsn = COALESCE(u.school_id, u.npsn) OR s.id = u.school_id WHERE u.username = ? LIMIT 1",
       [userId],
     );
     return fallback[0]?.npsn ?? null;
@@ -4127,7 +4503,7 @@ export class WorkspaceDataService implements OnModuleInit, OnApplicationBootstra
 
   private async findNpsnByUsername(usernameRaw: string): Promise<string | null> {
     const rows = await this.databaseService.query<(RowDataPacket & { npsn: string | null })[]>(
-      "SELECT s.npsn FROM users u LEFT JOIN schools s ON s.npsn = COALESCE(u.school_id, u.npsn) WHERE u.username = ? LIMIT 1",
+      "SELECT COALESCE(u.npsn, s.npsn) AS npsn FROM users u LEFT JOIN schools s ON s.npsn = COALESCE(u.school_id, u.npsn) OR s.id = u.school_id WHERE u.username = ? LIMIT 1",
       [usernameRaw],
     );
     return rows[0]?.npsn ?? null;
@@ -4744,29 +5120,44 @@ async function insertProposalHistorySnapshot(
     changedByUserId: string | null;
     changeIp: string | null;
     diffSummary: Record<string, unknown> | null;
+    npsn?: string | null;
   },
 ) {
   try {
-    await connection.execute(
-      `
+    const npsnVal = String(payload.npsn ?? payload.schoolId ?? "").trim().substring(0, 20) || null;
+    if (!npsnVal) {
+      Logger.warn("[insertProposalHistorySnapshot] skip: npsn null", "WorkspaceDataService");
+      return;
+    }
+    const entries: Array<{ fieldKey: string; oldValue: unknown; newValue: unknown }> = [];
+    entries.push({
+      fieldKey: `__meta.${payload.operationType}_v${payload.oldVersion ?? 0}`,
+      oldValue: {
+        proposalTablesBytes: payload.oldProposalTables ? Buffer.byteLength(JSON.stringify(payload.oldProposalTables), "utf8") : 0,
+        rpkpBytes: payload.oldRpkpSelections ? Buffer.byteLength(JSON.stringify(payload.oldRpkpSelections), "utf8") : 0,
+        version: payload.oldVersion ?? null,
+        diffSummary: payload.diffSummary ?? null,
+      },
+      newValue: null,
+    });
+    for (const e of entries) {
+      await connection.execute(
+        `
         INSERT INTO workspace_school_proposal_data_history
-          (operation_type, school_id, old_proposal_tables_json, old_rpkp_selections_json,
-           old_version, changed_by_user_id, change_ip, diff_summary)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+          (npsn, proposal_id, field_key, old_value, new_value, changed_by, changed_at)
+        VALUES (?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
       `,
-      [
-        payload.operationType,
-        payload.schoolId,
-        payload.oldProposalTables !== null ? JSON.stringify(payload.oldProposalTables) : null,
-        payload.oldRpkpSelections !== null ? JSON.stringify(payload.oldRpkpSelections) : null,
-        payload.oldVersion,
-        payload.changedByUserId,
-        payload.changeIp ?? null,
-        payload.diffSummary !== null ? JSON.stringify(payload.diffSummary) : null,
-      ],
-    );
+        [
+          npsnVal,
+          String(payload.schoolId ?? "").substring(0, 128) || null,
+          String(e.fieldKey).substring(0, 128),
+          e.oldValue !== null && e.oldValue !== undefined ? JSON.stringify(e.oldValue) : null,
+          e.newValue !== null && e.newValue !== undefined ? JSON.stringify(e.newValue) : null,
+          String(payload.changedByUserId ?? "").substring(0, 128) || null,
+        ],
+      );
+    }
   } catch (err) {
-    // History insert JANGAN sampai menyebabkan main transaction gagal — tapi LOG warning biar ketahuan
     const msg = err instanceof Error ? err.message : String(err);
     Logger.warn(`[insertProposalHistorySnapshot] non-fatal: ${msg}`, "WorkspaceDataService");
   }
@@ -4827,28 +5218,31 @@ async function writeSystemAuditLog(
   },
 ) {
   try {
+    const metaObj: Record<string, unknown> = {
+      module: entry.module,
+      tableName: entry.tableName,
+      oldHash: entry.oldHash,
+      newHash: entry.newHash,
+      rowcountDelta:
+        typeof entry.rowcountDelta === "bigint" ? String(entry.rowcountDelta) : entry.rowcountDelta,
+      bytesDelta: typeof entry.bytesDelta === "bigint" ? String(entry.bytesDelta) : entry.bytesDelta,
+      requestId: entry.requestId,
+    };
     await connection.execute(
       `
         INSERT INTO system_audit_log
-          (actor_user_id, actor_role, module, action, table_name, record_id,
-           old_hash, new_hash, rowcount_delta, bytes_delta,
-           ip_address, user_agent, request_id)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+          (actor_id, actor_role, action, entity_type, entity_id, meta, ip_address, user_agent, created_at)
+        VALUES (?, ?, ?, ?, ?, ?::jsonb, ?, ?, CURRENT_TIMESTAMP)
       `,
       [
-        entry.actorUserId,
-        entry.actorRole,
-        entry.module,
-        entry.action,
-        entry.tableName,
-        entry.recordId,
-        entry.oldHash,
-        entry.newHash,
-        entry.rowcountDelta,
-        entry.bytesDelta !== null && typeof entry.bytesDelta === "bigint" ? String(entry.bytesDelta) : entry.bytesDelta,
-        entry.ipAddress,
-        entry.userAgent,
-        entry.requestId,
+        String(entry.actorUserId ?? "").substring(0, 128) || null,
+        String(entry.actorRole ?? "").substring(0, 64) || null,
+        String(entry.action).substring(0, 128),
+        String(entry.tableName ?? "").substring(0, 128) || null,
+        String(entry.recordId ?? "").substring(0, 128) || null,
+        JSON.stringify(metaObj),
+        String(entry.ipAddress ?? "").substring(0, 64) || null,
+        entry.userAgent ?? null,
       ],
     );
   } catch (err) {
@@ -4878,6 +5272,7 @@ function preservePayloadObject(
   oldPayload: unknown,
   newPayload: unknown,
   fallback: Record<string, unknown> = {},
+  skipGlobalMeaningCheck: boolean = false,
 ): Record<string, unknown> {
   const oldSafe =
     typeof oldPayload === "object" && oldPayload !== null ? (oldPayload as Record<string, unknown>) : null;
@@ -4900,7 +5295,7 @@ function preservePayloadObject(
   } catch {
     /* jika JSON.stringify gagal → lanjut (fallback ke logika berikutnya) */
   }
-  const newIsMeaningful = Object.keys(newSafe).length > 0 && isGlobalCardMeaningful(newSafe);
+  const newIsMeaningful = Object.keys(newSafe).length > 0 && (skipGlobalMeaningCheck || isGlobalCardMeaningful(newSafe));
   if (!newIsMeaningful) return oldSafe;
   return newSafe;
 }

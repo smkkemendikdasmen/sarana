@@ -199,25 +199,6 @@ export function LoginForm() {
   return (
     <div className="grid min-h-screen bg-[#f5f7fb] lg:grid-cols-[420px_minmax(0,1fr)]">
       <section className="flex min-h-screen flex-col bg-white px-7 py-8 md:px-8">
-        <div className="mb-6 rounded-2xl border border-amber-300/50 bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100/80 px-4 py-3.5 shadow-sm">
-          <div className="flex items-start gap-3">
-            <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-500/15 text-amber-700">
-              <AlertCircle className="h-4.5 w-4.5" />
-            </div>
-            <div className="flex-1">
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-800/90">
-                Pengumuman Resmi
-              </p>
-              <p className="mt-1 text-[13px] font-semibold leading-6 text-amber-950">
-                Status Sekolah ABT untuk sementara dinonaktifkan.
-              </p>
-              <p className="mt-0.5 text-[12px] leading-5 text-amber-900/85">
-                Akses sekolah Bantuan ABT <strong>akan dibuka kembali pada Selasa, 1 September 2026</strong>. Silakan hubungi administrator atau fasilitator wilayah jika ada pertanyaan mendesak.
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div className="mb-8 flex items-center gap-3">
           <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent-soft text-primary">
             <School className="h-5 w-5" />
